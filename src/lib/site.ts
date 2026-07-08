@@ -51,11 +51,14 @@ export const siteConfig = {
      *
      * ⚠️ FormSubmit exige une activation par e-mail, **propre à chaque adresse**.
      * Changer cette valeur ré-arme l'activation : le premier envoi vers la nouvelle
-     * adresse déclenche un lien de confirmation à cliquer, et aucun message n'est
-     * délivré avant.
+     * adresse déclenche un lien de confirmation à cliquer, et AUCUN message n'est
+     * délivré avant ce clic. Autrement dit, un changement non suivi d'activation
+     * fait disparaître silencieusement les demandes des prospects.
      *
-     * 🔁 VALEUR TEMPORAIRE DE TEST — à remettre sur `direction@misifrance.com`
-     *    une fois la recette du formulaire terminée.
+     * Choix assumé (2026-07-08) : les formulaires arrivent sur la boîte réellement
+     * relevée par le gérant, et non sur `direction@misifrance.com` (qui reste
+     * l'adresse de contact affichée publiquement). À rebasculer le jour où
+     * `direction@` sera relevée — sans oublier de la réactiver côté FormSubmit.
      */
     recipient: "jude.claude@misifrance.com",
   },
