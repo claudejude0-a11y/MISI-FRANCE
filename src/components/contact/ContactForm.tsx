@@ -2,11 +2,16 @@
 
 import { useState } from "react";
 
+import { siteConfig } from "@/lib/site";
+
 /**
  * Static export — no server, so the form posts straight to FormSubmit's
  * AJAX relay instead of a same-origin `/api/contact` route.
+ *
+ * Le destinataire vit dans `siteConfig.forms.recipient` (source unique, partagée
+ * avec DevisForm) — ne pas le réécrire en dur ici.
  */
-const FORMSUBMIT_URL = "https://formsubmit.co/ajax/direction@misifrance.com";
+const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${siteConfig.forms.recipient}`;
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");

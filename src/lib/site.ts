@@ -42,4 +42,21 @@ export const siteConfig = {
     /** Zones desservies (du plus prioritaire au moins prioritaire). */
     areaServed: ["Yonne", "Bourgogne-Franche-Comté", "Île-de-France"],
   },
+  forms: {
+    /**
+     * Destinataire réel des formulaires (ContactForm + DevisForm), via le relais
+     * FormSubmit. Volontairement SÉPARÉ de `business.email` : cette dernière est
+     * publiée dans le JSON-LD et les mentions légales, alors que celle-ci peut
+     * être basculée temporairement (recette, test) sans rien exposer.
+     *
+     * ⚠️ FormSubmit exige une activation par e-mail, **propre à chaque adresse**.
+     * Changer cette valeur ré-arme l'activation : le premier envoi vers la nouvelle
+     * adresse déclenche un lien de confirmation à cliquer, et aucun message n'est
+     * délivré avant.
+     *
+     * 🔁 VALEUR TEMPORAIRE DE TEST — à remettre sur `direction@misifrance.com`
+     *    une fois la recette du formulaire terminée.
+     */
+    recipient: "jude.claude@misifrance.com",
+  },
 } as const;
