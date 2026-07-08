@@ -1,0 +1,25 @@
+# --- MISI France — en-têtes HTTP pour Cloudflare Pages ---
+# Placé dans public/ : Next.js le recopie dans out/ à chaque build.
+# Remplace le bloc <IfModule mod_headers.c> du .htaccess (OVH).
+# Limite Cloudflare : 100 règles max, 2000 caractères par ligne.
+
+# Bundles JS/CSS générés par Next.js : le nom de fichier contient un hash de
+# contenu, donc l'URL change dès que le contenu change → cache définitif.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Assets et images servis depuis public/ : le nom NE contient PAS de hash, donc
+# jamais "immutable" (sinon un remplacement de logo resterait invisible un an).
+# 7 jours, revalidation ensuite.
+/assets/*
+  Cache-Control: public, max-age=604800
+
+/images/*
+  Cache-Control: public, max-age=604800
+
+# En-têtes de sécurité sur toutes les réponses.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=()

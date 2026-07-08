@@ -36,6 +36,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# cloudflare (cache local de l'émulateur wrangler)
+.wrangler/
+
+# graphify (graphe de connaissances généré localement, pas du code source)
+/graphify-out/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
