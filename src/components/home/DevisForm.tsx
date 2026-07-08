@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 
+/**
+ * Static export — no server, so the form posts straight to FormSubmit's
+ * AJAX relay instead of a same-origin `/api/contact` route.
+ */
+const FORMSUBMIT_URL = "https://formsubmit.co/ajax/direction@misifrance.com";
+
 const equipements = [
   "Extincteurs",
   "RIA",
@@ -25,17 +31,18 @@ export function DevisForm() {
 
     setStatus("sending");
     try {
-      const res = await fetch("/api/contact", {
+      const name = `${field("prenom")} ${field("nom")}`.trim();
+      const res = await fetch(FORMSUBMIT_URL, {
         method: "POST",
-        headers: { "content-type": "application/json" },
+        headers: { "content-type": "application/json", accept: "application/json" },
         body: JSON.stringify({
-          name: `${field("prenom")} ${field("nom")}`.trim(),
-          email: field("email"),
-          phone: field("telephone"),
-          company: field("societe"),
-          subject: field("prestation") || "Demande de devis",
-          message: field("besoin") || "(pas de description fournie)",
-          source: "devis",
+          _subject: `[MISI] Demande de devis — ${name}`,
+          Nom: name,
+          "E-mail": field("email"),
+          Téléphone: field("telephone") || "—",
+          Société: field("societe") || "—",
+          Sujet: field("prestation") || "Demande de devis",
+          Message: field("besoin") || "(pas de description fournie)",
         }),
       });
       if (!res.ok) throw new Error("upstream");

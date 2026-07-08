@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Static HTML export — no Node.js server required at hosting time (OVH
+  // shared hosting / any static host). Every route is prerendered to disk.
+  output: "export",
+
   // Drop the `X-Powered-By: Next.js` response header.
   poweredByHeader: false,
 
@@ -14,13 +18,9 @@ const nextConfig: NextConfig = {
   },
 
   images: {
-    // Modern formats — smaller than JPEG/PNG; the browser picks what it supports.
-    formats: ["image/avif", "image/webp"],
-    // Breakpoints `next/image` uses to build `srcset`. `deviceSizes` covers
-    // full-width images (aligned with the adaptive-grid breakpoints + retina);
-    // `imageSizes` covers smaller, fixed-width images and icons.
-    deviceSizes: [360, 640, 768, 1024, 1280, 1440, 1920, 2560],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Static export has no server to run the image optimizer at request
+    // time — ship the originals as-is.
+    unoptimized: true,
   },
 
   // React Compiler (automatic memoisation) is an opt-in performance win.

@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 
+/**
+ * Static export — no server, so the form posts straight to FormSubmit's
+ * AJAX relay instead of a same-origin `/api/contact` route.
+ */
+const FORMSUBMIT_URL = "https://formsubmit.co/ajax/direction@misifrance.com";
+
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
@@ -12,17 +18,18 @@ export function ContactForm() {
 
     setStatus("sending");
     try {
-      const res = await fetch("/api/contact", {
+      const name = `${field("firstname")} ${field("lastname")}`.trim();
+      const res = await fetch(FORMSUBMIT_URL, {
         method: "POST",
-        headers: { "content-type": "application/json" },
+        headers: { "content-type": "application/json", accept: "application/json" },
         body: JSON.stringify({
-          name: `${field("firstname")} ${field("lastname")}`.trim(),
-          email: field("email"),
-          phone: field("phone"),
-          company: field("company"),
-          subject: field("subject") || "Message via formulaire de contact",
-          message: field("message"),
-          source: "contact",
+          _subject: `[MISI] Contact — ${name}`,
+          Nom: name,
+          "E-mail": field("email"),
+          Téléphone: field("phone") || "—",
+          Société: field("company") || "—",
+          Sujet: field("subject") || "Message via formulaire de contact",
+          Message: field("message"),
         }),
       });
       if (!res.ok) throw new Error("upstream");
