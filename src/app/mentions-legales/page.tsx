@@ -48,11 +48,11 @@ export default function MentionsLegalesPage() {
           <div>
             <h2 className="mb-3 text-xl font-bold text-white">Hébergement</h2>
             <p className="leading-7 text-white/60">
-              Ce site est hébergé par Vercel Inc.
+              Ce site est hébergé par OVHcloud
               <br />
-              440 N Barranca Ave #4133, Covina, CA 91723, États-Unis
+              2 rue Kellermann, 59100 Roubaix, France
               <br />
-              <a href="https://vercel.com" className="text-red hover:underline" rel="noopener noreferrer" target="_blank">vercel.com</a>
+              <a href="https://www.ovhcloud.com" className="text-red hover:underline" rel="noopener noreferrer" target="_blank">ovhcloud.com</a>
             </p>
           </div>
 

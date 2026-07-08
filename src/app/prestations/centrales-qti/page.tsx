@@ -17,10 +17,9 @@ export const metadata: Metadata = {
 };
 
 const supervision = [
-  { title: "Sécurité incendie", text: "extinction automatique, désenfumage, portes coupe-feu, BAES : tout est surveillé en continu" },
+  { title: "Sécurité incendie", text: "extinction automatique, portes coupe-feu : tout est surveillé en continu" },
   { title: "Détection incendie", text: "alarmes, déclenchements et défauts remontent en temps réel, avec localisation précise du point concerné" },
   { title: "Détecteurs de fumée & chaleur", text: "surveillance point par point, réduction des fausses alarmes, historique complet des événements" },
-  { title: "Alarmes PPMS", text: "supervision des équipements de mise en sûreté pour confinement attentat et risques majeurs" },
   { title: "Installations techniques du bâtiment", text: "éclairage, chauffage, contrôle d'accès : une gestion centralisée qui simplifie l'exploitation au quotidien" },
   { title: "Vidéosurveillance", text: "intégration des caméras pour un accès immédiat aux images en cas d'alarme" },
 ];
@@ -31,7 +30,7 @@ const prestationsCati = [
   "Programmation — configuration des secteurs, scénarios d'alarme, adressage et droits d'accès",
   "Intégration vidéosurveillance et équipements techniques du bâtiment",
   "Mise en service & essais — test exhaustif de tous les points de détection et des asservissements",
-  "Vérification périodique NF S 61-933 — rapport d'intervention remis à chaque passage",
+  "Vérification annuelle — rapport d'intervention remis à chaque passage",
   "Maintenance corrective & raccordement à un centre de télésurveillance agréé",
 ];
 
@@ -73,7 +72,7 @@ export default function CatiPage() {
           <div>
             <AnimatedHeading className="mb-5 text-3xl font-bold text-white">Une vision complète de votre sécurité, en permanence</AnimatedHeading>
             <p className="mb-5 leading-7 text-white/60">
-              Dans un bâtiment, une école, un commerce ou un ERP, les équipements de sécurité sont nombreux et disséminés : détecteurs, extincteurs automatiques, désenfumage, portes coupe-feu, éclairage de sécurité, alarmes PPMS… Sans supervision centralisée, un défaut peut passer inaperçu pendant des semaines — jusqu&apos;à ce qu&apos;il soit trop tard.
+              Dans un bâtiment, une école, un commerce ou un ERP, les équipements de sécurité sont nombreux et disséminés : détecteurs, extincteurs automatiques, portes coupe-feu… Sans supervision centralisée, un défaut peut passer inaperçu pendant des semaines — jusqu&apos;à ce qu&apos;il soit trop tard.
             </p>
             <p className="mb-5 leading-7 text-white/60">
               La CATI change radicalement cette réalité. En un seul tableau de bord, vous disposez d&apos;une <strong className="text-white">vision globale et en temps réel</strong> de l&apos;état de toutes vos installations. Chaque anomalie, chaque déclenchement, chaque défaut remonte instantanément — avec l&apos;identification précise de l&apos;équipement concerné, sa localisation dans le bâtiment et l&apos;heure exacte de l&apos;événement.
@@ -131,7 +130,7 @@ export default function CatiPage() {
             <div className="rounded-[20px] border border-white/8 bg-surface p-6">
               <h4 className="mb-4 text-sm font-semibold text-white">Nos prestations CATI</h4>
               <ul className="flex flex-col">
-                {["Audit & étude personnalisée", "Installation complète", "Supervision équipements incendie", "Intégration vidéosurveillance", "Vérification NF S 61-933", "Télésurveillance 24h/24"].map((item) => (
+                {["Audit & étude personnalisée", "Installation complète", "Supervision équipements incendie", "Intégration vidéosurveillance", "Vérification annuelle", "Télésurveillance 24h/24"].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 border-b border-white/8 py-2.5 text-sm text-white/60 last:border-0">
                     <span className="text-xs text-red">→</span>
                     {item}

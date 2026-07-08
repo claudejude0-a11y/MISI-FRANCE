@@ -21,4 +21,25 @@ export const siteConfig = {
   author: "MISI",
   /** Browser theme-color (address bar / PWA). */
   themeColor: "#0D0D0D",
+  /**
+   * Business identity for local SEO (JSON-LD LocalBusiness + zone pages).
+   *
+   * ⚠️ À VÉRIFIER AVANT MISE EN LIGNE — ces valeurs seront publiées sur le web.
+   * Confirmer/compléter le téléphone et l'adresse exacte que vous souhaitez
+   * rendre publics (les valeurs ci-dessous sont pré-remplies à titre indicatif).
+   */
+  business: {
+    legalName: "MISI — Maintenance Installation Sécurité Incendie",
+    email: "direction@misifrance.com",
+    /** Numéro public — laisser vide tant qu'il n'est pas confirmé. */
+    phone: "",
+    address: {
+      locality: "Courtoin",
+      postalCode: "89150",
+      region: "Bourgogne-Franche-Comté",
+      country: "FR",
+    },
+    /** Zones desservies (du plus prioritaire au moins prioritaire). */
+    areaServed: ["Yonne", "Bourgogne-Franche-Comté", "Île-de-France"],
+  },
 } as const;

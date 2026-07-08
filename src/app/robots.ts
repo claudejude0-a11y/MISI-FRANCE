@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 
 import { siteConfig } from "@/lib/site";
 
+// Static export has no server to run this at request time — prerender once.
+export const dynamic = "force-static";
+
 /**
  * Generates `/robots.txt`. Allows all crawlers and points them at the sitemap.
  * Tighten the rules per environment (e.g. disallow `/` on staging).

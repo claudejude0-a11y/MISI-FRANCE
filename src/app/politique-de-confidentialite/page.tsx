@@ -41,7 +41,7 @@ export default function ConfidentialitePage() {
           <div>
             <h2 className="mb-3 text-xl font-bold text-white">Destinataire et transmission</h2>
             <p className="leading-7 text-white/60">
-              Les messages envoyés via les formulaires sont acheminés par e-mail à MISI (direction@misifrance.com) via le service de relais de formulaires FormSubmit. Le site est hébergé par Vercel Inc. Ces prestataires techniques n&apos;utilisent pas vos données à d&apos;autres fins que l&apos;acheminement.
+              Les messages envoyés via les formulaires sont acheminés par e-mail à MISI (direction@misifrance.com) via le service de relais de formulaires FormSubmit. Le site est hébergé par OVHcloud (France). Ces prestataires techniques n&apos;utilisent pas vos données à d&apos;autres fins que l&apos;acheminement.
             </p>
           </div>
 
