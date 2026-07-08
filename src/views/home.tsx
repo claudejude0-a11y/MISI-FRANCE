@@ -5,6 +5,7 @@ import { Inview } from "@/components/animation/springs/in-view";
 import { AnimatedHeading } from "@/components/common/AnimatedHeading";
 import { Eyebrow } from "@/components/common/Eyebrow";
 import { IconArrowRight } from "@/components/icons";
+import { ClientsMarquee } from "@/components/home/ClientsMarquee";
 import { DevisForm } from "@/components/home/DevisForm";
 import { Faq } from "@/components/home/Faq";
 import { HeroSection } from "@/components/home/HeroSection";
@@ -60,6 +61,14 @@ export const HomeView = () => {
             </span>
           ))}
         </div>
+      </section>
+
+      {/* CLIENTS — ils nous font confiance */}
+      <section className="border-b border-white/8 py-14">
+        <p className="font-tech mb-9 text-center text-[11px] tracking-[0.15em] text-white/35 uppercase">
+          Ils nous font confiance
+        </p>
+        <ClientsMarquee />
       </section>
 
       {/* SECTEURS */}
