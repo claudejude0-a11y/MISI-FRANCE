@@ -32,29 +32,55 @@ Pages sert nativement `/contact` depuis `contact.html` et détecte `404.html` to
 
 ---
 
-## Étape 1 — Pousser le code sur GitHub
+## Étape 1 — Pousser le code sur GitHub ✅ fait le 2026-07-08
 
-Le dépôt existe : `https://github.com/claudejude0-a11y/MISI-FRANCE.git`
+Dépôt : `https://github.com/claudejude0-a11y/MISI-FRANCE.git`, branche `main`.
 
-⚠️ **Beaucoup de travail local n'est pas encore poussé** (pages zones, marquee clients,
-`_headers`, suppression de `src/app/api/contact/route.ts`…). Cloudflare build depuis
-GitHub : **ce qui n'est pas poussé ne sera pas en ligne.**
+Cloudflare build **depuis GitHub** : ce qui n'est pas poussé n'est pas en ligne.
+Le déploiement se déclenche à chaque `git push origin main`.
 
 ```bash
 cd ~/misi-website-next
 git add -A
-git commit -m "Config Cloudflare Pages + pages zones + marquee clients"
+git commit -m "..."
 git push origin main
 ```
+
+Le dépôt ne contient **qu'un seul lockfile** (`package-lock.json`). `yarn.lock` a été
+supprimé volontairement : Cloudflare le détecte **avant** `package-lock.json` et
+builderait avec yarn, alors que le projet est développé avec npm. Un futur
+`npm install <dep>` n'aurait mis à jour que `package-lock.json` → build CI silencieusement
+décalé du local. **Ne pas réintroduire `yarn.lock`.**
+
+> Si `git push` échoue sur `Invalid username or token` : Git Credential Manager tient
+> un identifiant périmé. Purger puis repousser (une fenêtre de connexion s'ouvre) :
+> ```bash
+> printf "protocol=https\nhost=github.com\n\n" | git credential reject
+> git push origin main
+> ```
 
 ---
 
 ## Étape 2 — Créer le projet Cloudflare Pages
 
 1. <https://dash.cloudflare.com> → **Workers & Pages** → **Create** → **Pages** →
-   **Connect to Git**
-2. Autoriser GitHub, choisir le dépôt **MISI-FRANCE**, branche **`main`**
-3. Paramètres de build :
+   **Importer un dépôt Git existant**
+2. **Se connecter à GitHub** → installation de la GitHub App *Cloudflare Workers and Pages*
+   - choisir **« Seuls les dépôts sélectionnés »** → cocher **MISI-FRANCE** uniquement
+     (moindre privilège ; « Tous les dépôts » couvrirait aussi vos dépôts futurs)
+   - ⚠️ **Permissions réellement demandées** — plus larges qu'un simple accès en lecture,
+     et **non modifiables** :
+     - *Lecture* sur les métadonnées
+     - **Lecture et écriture** sur : administration, contrôles (checks), **code**,
+       déploiements, demandes de fusion
+
+     L'écriture sert aux *checks*, aux *deployment statuses* et aux commentaires de PR.
+     Révocable à tout moment : GitHub → *Settings* → *Applications* →
+     *Cloudflare Workers and Pages* → *Revoke*.
+   - GitHub bascule ensuite en **sudo mode** : il envoie un code par e-mail à saisir
+     avant de finaliser l'installation. Étape manuelle, incontournable.
+3. Choisir le dépôt **MISI-FRANCE**, branche **`main`**
+4. Paramètres de build :
 
    | Champ | Valeur |
    |---|---|
@@ -63,13 +89,19 @@ git push origin main
    | Build output directory | `out` |
    | Root directory | *(vide)* |
 
-4. **Save and Deploy**
+5. **Save and Deploy**
 
-Le site est en ligne sur `misi-france.pages.dev` en ~2 minutes.
+Le site est en ligne sur `<nom-du-projet>.pages.dev` en ~2 minutes.
 Chaque `git push` sur `main` redéploie automatiquement.
 
 > Si le build échoue sur `Failed to fetch Google Fonts` (Archivo / JetBrains Mono /
 > Onest) : c'est transitoire, relancer le déploiement. Ce n'est pas une erreur de code.
+
+> **Si vous refusez d'accorder l'écriture à Cloudflare sur le dépôt**, la Git integration
+> est impossible. Alternative : `wrangler login` puis `npx wrangler pages deploy out`
+> (Direct Upload). Cloudflare n'obtient aucun accès GitHub, mais il n'y a plus de
+> redéploiement automatique — et un projet Direct Upload **ne peut pas** être reconverti
+> en projet Git ensuite.
 
 ---
 
@@ -127,11 +159,12 @@ Dashboard → **SSL/TLS** → **Edge Certificates** → activer **Always Use HTT
 
 ## Étape 4 — Empêcher l'indexation de `*.pages.dev`
 
-`misi-france.pages.dev` reste accessible publiquement et Google peut l'indexer, ce qui
-créerait du contenu dupliqué face à `www.misifrance.com`.
+Le sous-domaine `<nom-du-projet>.pages.dev` (nom exact affiché par Cloudflare à la création
+du projet) reste accessible publiquement et Google peut l'indexer, ce qui créerait du
+contenu dupliqué face à `www.misifrance.com`.
 
 Créer une seconde *Redirect Rule* (ou une Bulk Redirect) :
-`Hostname` `equals` `misi-france.pages.dev` → 301 vers `https://www.misifrance.com`
+`Hostname` `equals` `<nom-du-projet>.pages.dev` → 301 vers `https://www.misifrance.com`
 + chemin.
 
 ---
