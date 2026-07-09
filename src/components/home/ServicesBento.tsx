@@ -86,8 +86,7 @@ const cards = [
     tag: "Armoires électriques",
     title: "Réflex O Feu",
     text: "Détection et extinction automatique pour armoires électriques industrielles — agent FK-5-1-12 sans résidu, extinction en moins de 3 secondes.",
-    // ⚠️ Image temporaire — remplacer par une photo Réflex O Feu.
-    image: "/images/centrales.jpg",
+    image: "/images/reflex-o-feu.jpg",
     size: "wide",
   },
 ];

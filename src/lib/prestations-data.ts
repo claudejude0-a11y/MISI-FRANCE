@@ -387,12 +387,8 @@ export const prestations: Prestation[] = [
     breadcrumbLabel: "Réflex O Feu",
     badgeText: "Détection & extinction automatique",
     Icon: IconServer,
-    // ⚠️ IMAGES TEMPORAIRES — placeholders en attendant les vraies photos ROF.
-    // Remplacer par les visuels fournis par Réflex O Feu / MISI :
-    //   hero    → /images/reflex-o-feu.jpg (système installé dans une armoire)
-    //   galerie → tube thermique, tête sprinkler, cylindre FK-5-1-12
-    heroImage: "/images/centrales.jpg",
-    heroAlt: "Système Réflex O Feu de protection d'armoire électrique",
+    heroImage: "/images/reflex-o-feu.jpg",
+    heroAlt: "Cylindre Réflex O Feu et armoire électrique protégée",
     intro:
       "Réflex O Feu (ROF) est un système autonome de détection et d'extinction dédié aux armoires électriques industrielles. Nous l'installons et en assurons la maintenance, avec une extinction ciblée au plus près des composants à risque, en moins de 3 secondes et sans résidu.",
     h2: "Qu'est-ce que Réflex O Feu ?",
@@ -402,9 +398,9 @@ export const prestations: Prestation[] = [
       "L'agent utilisé est le FK-5-1-12 (fluide diélectrique) : non conducteur, il est compatible avec des équipements sous tension, ne laisse aucun résidu et n'occasionne aucun nettoyage ni dégât collatéral sur les équipements adjacents. Son impact environnemental est faible (potentiel de réchauffement global proche de 1, sans action sur la couche d'ozone) et il est conforme au règlement européen F-Gas. L'extinction localisée limite l'arrêt de production et préserve les équipements voisins.",
     ],
     gallery: [
-      { src: "/images/centrales.jpg", alt: "Armoire électrique protégée par Réflex O Feu" },
-      { src: "/images/colonnes.jpg", alt: "Installation technique en environnement industriel" },
-      { src: "/images/tech-hero.jpg", alt: "Composants électriques sous surveillance thermique" },
+      { src: "/images/reflex-o-feu-armoire.jpg", alt: "Tube thermique Réflex O Feu courant sur les rangées d'une armoire électrique" },
+      { src: "/images/reflex-o-feu-coffret.jpg", alt: "Coffret électrique équipé d'un cylindre Réflex O Feu" },
+      { src: "/images/reflex-o-feu-composants.jpg", alt: "Détection Réflex O Feu au plus près des composants électriques" },
     ],
     regleTitle: "Certifications & conformité",
     regleText:
