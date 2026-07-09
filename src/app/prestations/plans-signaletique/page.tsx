@@ -157,8 +157,8 @@ export default function PlansSignaletiquePage() {
               </p>
             </div>
             <PrestationHeroPhoto
-              heroImage="/images/plans/plan-evacuation.jpg"
-              heroAlt="Plan d'évacuation normalisé NF X08-070 affiché en ERP"
+              heroImage="/images/plans/plans-general.jpg"
+              heroAlt="Plans d'intervention, d'évacuation, de chambre et signalétique réalisés par MISI"
               badgeText="Relevé, conception & pose"
               icon={<IconMapPin width={16} height={16} />}
             />
