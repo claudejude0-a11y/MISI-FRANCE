@@ -87,6 +87,14 @@ const cards = [
     title: "Réflex O Feu",
     text: "Détection et extinction automatique pour armoires électriques industrielles — agent FK-5-1-12 sans résidu, extinction en moins de 3 secondes.",
     image: "/images/reflex-o-feu.jpg",
+    size: "normal",
+  },
+  {
+    slug: "plans-signaletique",
+    tag: "Plans & signalétique",
+    title: "Plans & signalétique",
+    text: "Plans d'évacuation, d'intervention, de chambre, consignes de sécurité et panneaux normalisés (NF X08-070, ISO 7010) — relevé, conception et pose.",
+    image: "/images/plans/plan-evacuation.jpg",
     size: "wide",
   },
 ];

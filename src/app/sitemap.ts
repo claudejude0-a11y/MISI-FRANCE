@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...prestations.map((p) => `/prestations/${p.slug}`),
     "/prestations/centrales-qti",
     "/prestations/ppms",
+    "/prestations/plans-signaletique",
   ];
   const zoneRoutes = zones.map((z) => `/zones/${z.slug}`);
 

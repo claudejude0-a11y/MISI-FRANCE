@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { PrestationView } from "@/components/prestation/PrestationView";
 import { getPrestation, prestations } from "@/lib/prestations-data";
+import { generateMetadata as buildMetadata } from "@/utils/seo/generate-page-metadata";
 
 export function generateStaticParams() {
   return prestations.map((p) => ({ slug: p.slug }));
@@ -16,7 +17,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const p = getPrestation(slug);
   if (!p) return {};
-  return { title: p.titleTag, description: p.intro };
+  // Passe par le helper SEO pour émettre le canonical par page (sans lui, le
+  // starter renvoyait toujours "/") — corrige aussi les prestations existantes.
+  return buildMetadata({
+    title: p.titleTag,
+    description: p.intro,
+    url: `/prestations/${p.slug}`,
+  });
 }
 
 export default async function PrestationPage({
