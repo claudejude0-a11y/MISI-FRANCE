@@ -409,7 +409,7 @@ export const prestations: Prestation[] = [
     list: [
       { text: "Étude préalable — analyse de risque, calcul de la quantité d'agent, dimensionnement du réseau de diffusion" },
       { text: "Installation sur armoire en service — sans travaux lourds, sans coupure d'exploitation" },
-      { text: "Raccordement aux systèmes existants — coupure d'alimentation et de ventilation, report d'alarme, GTC/SSI" },
+      { text: "Raccordement aux systèmes existants — coupure d'alimentation et de ventilation, report d'alarme, CATI" },
       { text: "Maintenance préventive annuelle — prise de pression des cylindres, contrôle des déclencheurs (tube et tête)" },
       { text: "Mise à jour du registre de sécurité — rapport d'intervention à chaque passage" },
       { text: "Dossier technique — certificats, fiches FK-5-1-12, plans et rapports d'essais" },
