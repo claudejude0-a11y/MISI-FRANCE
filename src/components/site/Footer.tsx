@@ -31,6 +31,7 @@ export function Footer() {
               <Link href="/prestations/centrales-qti" className="transition hover:text-white">CATI</Link>
               <Link href="/prestations/baches" className="transition hover:text-white">Bâches incendie</Link>
               <Link href="/prestations/ppms" className="transition hover:text-white">PPMS</Link>
+              <Link href="/prestations/reflex-o-feu" className="transition hover:text-white">Réflex O Feu</Link>
             </div>
           </div>
           <div>

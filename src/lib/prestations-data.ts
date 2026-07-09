@@ -9,6 +9,7 @@ import {
   IconFactory,
   IconLightbulb,
   IconSchool,
+  IconServer,
   IconStore,
   IconValve,
   IconWind,
@@ -376,6 +377,60 @@ export const prestations: Prestation[] = [
     otherLinks: [
       { slug: "portes-coupe-feu", label: "Portes coupe-feu" },
       { slug: "centrales-qti", label: "CATI" },
+    ],
+  },
+  {
+    slug: "reflex-o-feu",
+    title: "Réflex O Feu — Extinction pour armoires électriques",
+    titleTag: "Réflex O Feu — Extinction incendie armoires électriques | MISI",
+    label: "Armoires électriques",
+    breadcrumbLabel: "Réflex O Feu",
+    badgeText: "Détection & extinction automatique",
+    Icon: IconServer,
+    // ⚠️ IMAGES TEMPORAIRES — placeholders en attendant les vraies photos ROF.
+    // Remplacer par les visuels fournis par Réflex O Feu / MISI :
+    //   hero    → /images/reflex-o-feu.jpg (système installé dans une armoire)
+    //   galerie → tube thermique, tête sprinkler, cylindre FK-5-1-12
+    heroImage: "/images/centrales.jpg",
+    heroAlt: "Système Réflex O Feu de protection d'armoire électrique",
+    intro:
+      "Réflex O Feu (ROF) est un système autonome de détection et d'extinction dédié aux armoires électriques industrielles. Nous l'installons et en assurons la maintenance, avec une extinction ciblée au plus près des composants à risque, en moins de 3 secondes et sans résidu.",
+    h2: "Qu'est-ce que Réflex O Feu ?",
+    paragraphs: [
+      "Les incendies d'origine électrique — échauffement de connexions, surcharge, court-circuit, défaut d'isolement — démarrent le plus souvent à l'intérieur même des armoires. Or ces armoires sont ventilées, traversées de câbles et rarement étanches : les méthodes d'extinction classiques, qui supposent un volume clos, y perdent leur efficacité. Réflex O Feu est conçu pour ces conditions réelles d'exploitation.",
+      "La détection se fait directement au cœur des composants sensibles (jeux de barres, variateurs, batteries de condensateurs, onduleurs), par tube thermique linéaire ou par tête thermique ponctuelle calibrée. En cas d'échauffement anormal, le déclenchement est purement mécanique — il fonctionne sans alimentation électrique ni centrale. L'agent extincteur est alors diffusé sur la zone à risque, et un contact sec reste disponible pour couper l'alimentation et la ventilation, mettant l'installation en sécurité.",
+      "L'agent utilisé est le FK-5-1-12 (fluide diélectrique) : non conducteur, il est compatible avec des équipements sous tension, ne laisse aucun résidu et n'occasionne aucun nettoyage ni dégât collatéral sur les équipements adjacents. Son impact environnemental est faible (potentiel de réchauffement global proche de 1, sans action sur la couche d'ozone) et il est conforme au règlement européen F-Gas. L'extinction localisée limite l'arrêt de production et préserve les équipements voisins.",
+    ],
+    gallery: [
+      { src: "/images/centrales.jpg", alt: "Armoire électrique protégée par Réflex O Feu" },
+      { src: "/images/colonnes.jpg", alt: "Installation technique en environnement industriel" },
+      { src: "/images/tech-hero.jpg", alt: "Composants électriques sous surveillance thermique" },
+    ],
+    regleTitle: "Certifications & conformité",
+    regleText:
+      "Réflex O Feu est certifié ANPI NTN 128-L, une certification de performance mesurée sur feu réel pour armoires électriques ventilées, et répond à certaines exigences des référentiels EN 15004 et NFPA 2001 relatifs aux systèmes d'extinction à gaz. Les équipements sous pression portent le marquage CE au titre de la directive PED, et les ampoules de déclenchement thermique sont certifiées UL. Côté exploitation, l'installation s'inscrit dans les obligations du Code du travail en matière de moyens de lutte contre l'incendie (articles R4227-28 à R4227-41) et de prévention des risques électriques. Chaque projet est livré avec un dossier technique complet : certificats de conformité, fiches de données de sécurité de l'agent, plans d'implantation et rapports d'essais nécessaires aux vérifications périodiques.",
+    h3: "Nos prestations Réflex O Feu",
+    list: [
+      { text: "Étude préalable — analyse de risque, calcul de la quantité d'agent, dimensionnement du réseau de diffusion" },
+      { text: "Installation sur armoire en service — sans travaux lourds, sans coupure d'exploitation" },
+      { text: "Raccordement aux systèmes existants — coupure d'alimentation et de ventilation, report d'alarme, GTC/SSI" },
+      { text: "Maintenance préventive annuelle — prise de pression des cylindres, contrôle des déclencheurs (tube et tête)" },
+      { text: "Mise à jour du registre de sécurité — rapport d'intervention à chaque passage" },
+      { text: "Dossier technique — certificats, fiches FK-5-1-12, plans et rapports d'essais" },
+    ],
+    sidebarTitle: "Domaines d'application",
+    sidebarList: [
+      "TGBT & tableaux électriques",
+      "Automates, variateurs, onduleurs",
+      "Baies informatiques & data centers",
+      "Télécoms & baies de brassage",
+      "Machines-outils & robots",
+      "Environnements spécifiques (études sur mesure)",
+    ],
+    otherLinks: [
+      { slug: "centrales-qti", label: "CATI" },
+      { slug: "baes", label: "BAES" },
+      { slug: "extincteurs", label: "Extincteurs" },
     ],
   },
 ];

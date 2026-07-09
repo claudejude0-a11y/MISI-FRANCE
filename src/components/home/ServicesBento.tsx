@@ -79,6 +79,15 @@ const cards = [
     title: "PPMS — Plans Particuliers de Mise en Sûreté",
     text: "Élaboration, mise à jour et accompagnement à la mise en œuvre de vos plans de gestion de crise. Exercices de simulation inclus.",
     image: "/images/alarme-ppms.jpg",
+    size: "normal",
+  },
+  {
+    slug: "reflex-o-feu",
+    tag: "Armoires électriques",
+    title: "Réflex O Feu",
+    text: "Détection et extinction automatique pour armoires électriques industrielles — agent FK-5-1-12 sans résidu, extinction en moins de 3 secondes.",
+    // ⚠️ Image temporaire — remplacer par une photo Réflex O Feu.
+    image: "/images/centrales.jpg",
     size: "wide",
   },
 ];
