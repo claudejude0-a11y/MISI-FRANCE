@@ -53,15 +53,16 @@ export function generateMetadata({
       siteName,
       // Dimensions must match the real asset; 1200×630 is the ideal size.
       images: [{ url: ogImage, width: 900, height: 600 }],
-      locale: "en_US",
+      locale: "fr_FR",
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      site: twitterHandle,
-      creator: twitterHandle,
+      // Only emit the handle when one is configured — avoids pointing the card
+      // at a non-existent account.
+      ...(twitterHandle ? { site: twitterHandle, creator: twitterHandle } : {}),
       images: [ogImage],
     },
     icons: {

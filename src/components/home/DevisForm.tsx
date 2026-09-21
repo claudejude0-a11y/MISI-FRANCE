@@ -23,6 +23,8 @@ const equipements = [
   "Désenfumage",
   "CATI",
   "Alarme Type 4 & PPMS",
+  "Réflex O Feu (armoires électriques)",
+  "Plans & signalétique",
   "Plusieurs équipements / ensemble du site",
 ];
 
@@ -33,6 +35,15 @@ export function DevisForm() {
     e.preventDefault();
     const form = e.currentTarget;
     const field = (n: string) => (form.elements.namedItem(n) as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null)?.value ?? "";
+
+    // Honeypot — un bot qui remplit tous les champs remplira aussi celui-ci,
+    // masqué aux humains. On simule alors un envoi réussi sans rien transmettre.
+    if (field("website")) {
+      setStatus("sent");
+      form.reset();
+      setTimeout(() => setStatus("idle"), 5000);
+      return;
+    }
 
     setStatus("sending");
     try {
@@ -66,41 +77,47 @@ export function DevisForm() {
     <div className="rounded-[28px] border border-white/8 bg-surface p-10">
       <div className="mb-7 text-lg font-bold text-white">Demande de devis</div>
       <form onSubmit={handleSubmit}>
+        {/* Honeypot anti-spam — masqué aux humains et aux lecteurs d'écran */}
+        <div className="hidden" aria-hidden="true">
+          <label htmlFor="devis-website">Ne pas remplir ce champ</label>
+          <input id="devis-website" name="website" tabIndex={-1} autoComplete="off" />
+        </div>
         <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
           <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-semibold tracking-wide text-white/60">Nom *</label>
-            <input name="nom" required placeholder="Votre nom" className={inputClass} autoComplete="family-name" />
+            <label htmlFor="devis-nom" className="text-xs font-semibold tracking-wide text-white/60">Nom *</label>
+            <input id="devis-nom" name="nom" required placeholder="Votre nom" className={inputClass} autoComplete="family-name" />
           </div>
           <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-semibold tracking-wide text-white/60">Prénom *</label>
-            <input name="prenom" required placeholder="Votre prénom" className={inputClass} autoComplete="given-name" />
+            <label htmlFor="devis-prenom" className="text-xs font-semibold tracking-wide text-white/60">Prénom *</label>
+            <input id="devis-prenom" name="prenom" required placeholder="Votre prénom" className={inputClass} autoComplete="given-name" />
           </div>
           <div className="flex flex-col gap-1.5 sm:col-span-2">
-            <label className="text-xs font-semibold tracking-wide text-white/60">Société / Établissement</label>
-            <input name="societe" placeholder="Nom de l'entreprise" className={inputClass} autoComplete="organization" />
+            <label htmlFor="devis-societe" className="text-xs font-semibold tracking-wide text-white/60">Société / Établissement</label>
+            <input id="devis-societe" name="societe" placeholder="Nom de l'entreprise" className={inputClass} autoComplete="organization" />
           </div>
           <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-semibold tracking-wide text-white/60">Téléphone *</label>
-            <input name="telephone" required type="tel" placeholder="06 00 00 00 00" className={inputClass} autoComplete="tel" />
+            <label htmlFor="devis-telephone" className="text-xs font-semibold tracking-wide text-white/60">Téléphone *</label>
+            <input id="devis-telephone" name="telephone" required type="tel" placeholder="06 00 00 00 00" className={inputClass} autoComplete="tel" />
           </div>
           <div className="flex flex-col gap-1.5 sm:col-span-2">
-            <label className="text-xs font-semibold tracking-wide text-white/60">E-mail *</label>
-            <input name="email" required type="email" placeholder="votre@email.fr" className={inputClass} autoComplete="email" />
+            <label htmlFor="devis-email" className="text-xs font-semibold tracking-wide text-white/60">E-mail *</label>
+            <input id="devis-email" name="email" required type="email" placeholder="votre@email.fr" className={inputClass} autoComplete="email" />
           </div>
           <div className="flex flex-col gap-1.5 sm:col-span-2">
-            <label className="text-xs font-semibold tracking-wide text-white/60">Type de prestation</label>
-            <select name="prestation" className={inputClass}>
-              <option value="">Sélectionnez un équipement...</option>
+            <label htmlFor="devis-prestation" className="text-xs font-semibold tracking-wide text-white/60">Type de prestation</label>
+            <select id="devis-prestation" name="prestation" className={inputClass}>
+              <option value="">Sélectionnez un équipement…</option>
               {equipements.map((eq) => (
                 <option key={eq}>{eq}</option>
               ))}
             </select>
           </div>
           <div className="flex flex-col gap-1.5 sm:col-span-2">
-            <label className="text-xs font-semibold tracking-wide text-white/60">Décrivez votre besoin</label>
+            <label htmlFor="devis-besoin" className="text-xs font-semibold tracking-wide text-white/60">Décrivez votre besoin</label>
             <textarea
+              id="devis-besoin"
               name="besoin"
-              placeholder="Type d'établissement, nombre d'équipements, localisation..."
+              placeholder="Type d'établissement, nombre d'équipements, localisation…"
               className={`${inputClass} min-h-[88px] resize-y`}
             />
           </div>
@@ -111,16 +128,29 @@ export function DevisForm() {
           className="mt-4.5 flex w-full items-center justify-center gap-2 rounded-xl bg-red py-3.5 text-sm font-semibold text-white transition hover:bg-red-dark disabled:opacity-70"
         >
           {status === "idle" && "Envoyer ma demande"}
-          {status === "sending" && "Envoi en cours..."}
+          {status === "sending" && "Envoi en cours…"}
           {status === "sent" && "✓ Demande envoyée !"}
           {status === "error" && "Réessayer l'envoi"}
         </button>
+        {status === "sent" && (
+          <p className="mt-3 text-center text-xs text-red" role="status">
+            Merci, votre demande a bien été envoyée. Nous vous répondons sous 24 h ouvrées.
+          </p>
+        )}
         {status === "error" && (
           <p className="mt-3 text-center text-xs text-red" role="alert">
             L&apos;envoi a échoué. Réessayez ou écrivez-nous à direction@misifrance.com
           </p>
         )}
-        <p className="mt-3 text-center text-xs text-white/35">* Champs obligatoires — Vos données ne sont pas revendues</p>
+        <p className="mt-3 text-center text-xs text-white/35">
+          * Champs obligatoires. En envoyant ce formulaire, vous acceptez que vos
+          informations soient utilisées pour traiter votre demande, conformément à
+          notre{" "}
+          <a href="/politique-de-confidentialite" className="text-white/50 underline underline-offset-2 hover:text-white">
+            politique de confidentialité
+          </a>
+          .
+        </p>
       </form>
     </div>
   );

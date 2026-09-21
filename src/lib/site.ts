@@ -17,7 +17,9 @@ export const siteConfig = {
   url: publicEnv.NEXT_PUBLIC_SITE_URL ?? "https://www.misifrance.com",
   /** Default Open Graph / Twitter share image (path under `public/`). */
   ogImage: "/open-graph.png",
-  twitterHandle: "@misi_incendie",
+  /** Compte X/Twitter officiel — laisser `undefined` tant qu'il n'existe pas
+   *  (évite de pointer les Twitter Cards vers un handle inexistant). */
+  twitterHandle: undefined as string | undefined,
   author: "MISI",
   /** Browser theme-color (address bar / PWA). */
   themeColor: "#0D0D0D",
@@ -31,8 +33,8 @@ export const siteConfig = {
   business: {
     legalName: "MISI — Maintenance Installation Sécurité Incendie",
     email: "direction@misifrance.com",
-    /** Numéro public — laisser vide tant qu'il n'est pas confirmé. */
-    phone: "",
+    /** Numéro public au format E.164 (confirmé : identique aux mentions légales, footer et page contact). */
+    phone: "+33762575678",
     address: {
       locality: "Courtoin",
       postalCode: "89150",

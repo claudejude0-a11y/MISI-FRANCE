@@ -7,11 +7,13 @@ import { RevealItem } from "@/components/common/RevealItem";
 import { IconClock, IconMail, IconMapPin, IconPhone } from "@/components/icons";
 import { FooterMini } from "@/components/site/FooterMini";
 import { Header } from "@/components/site/Header";
+import { generateMetadata as buildMetadata } from "@/utils/seo/generate-page-metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Contact — MISI Sécurité Incendie",
-  description: "Une question, un devis, une urgence ? Notre équipe vous répond sous 24h ouvrées.",
-};
+  description: "Une question, un devis, une urgence ? Notre équipe de sécurité incendie vous répond sous 24 h ouvrées.",
+  url: "/contact",
+});
 
 const details = [
   { Icon: IconPhone, title: "Téléphone", text: "07 62 57 56 78 — du lundi au vendredi, 8h–18h" },

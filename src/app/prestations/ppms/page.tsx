@@ -9,12 +9,14 @@ import { IconArrowRight, IconClipboardList } from "@/components/icons";
 import { PrestationHeroPhoto } from "@/components/prestation/PrestationHeroPhoto";
 import { FooterMini } from "@/components/site/FooterMini";
 import { Header } from "@/components/site/Header";
+import { generateMetadata as buildMetadata } from "@/utils/seo/generate-page-metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Alarme Type 4 & Alarme PPMS — Équipements de mise en sûreté | MISI",
   description:
     "MISI installe et maintient l'alarme Type 4 pour l'évacuation incendie et l'alarme PPMS pour le confinement en cas d'attentat, d'intrusion ou de risque majeur.",
-};
+  url: "/prestations/ppms",
+});
 
 const type4Composition = [
   { strong: "Déclencheurs manuels", text: "boîtiers rouges positionnés à chaque niveau et sortie" },

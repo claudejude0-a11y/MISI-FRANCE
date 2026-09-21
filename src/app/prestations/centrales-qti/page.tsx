@@ -9,12 +9,14 @@ import { IconArrowRight } from "@/components/icons";
 import { PrestationHeroPhoto } from "@/components/prestation/PrestationHeroPhoto";
 import { FooterMini } from "@/components/site/FooterMini";
 import { Header } from "@/components/site/Header";
+import { generateMetadata as buildMetadata } from "@/utils/seo/generate-page-metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "CATI — Centrale d'Alarme Technique Incendie | MISI",
   description:
     "Pilotez l'ensemble de la sécurité de votre bâtiment depuis un seul point avec la CATI — supervision temps réel de vos alarmes et équipements incendie.",
-};
+  url: "/prestations/centrales-qti",
+});
 
 const supervision = [
   { title: "Sécurité incendie", text: "extinction automatique, portes coupe-feu : tout est surveillé en continu" },

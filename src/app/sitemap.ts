@@ -7,9 +7,13 @@ import { zones } from "@/lib/zones-data";
 // Static export has no server to run this at request time — prerender once.
 export const dynamic = "force-static";
 
-/** Generates `/sitemap.xml` — every public route on the site. */
+/**
+ * Generates `/sitemap.xml`. Only indexable pages belong here — the legal pages
+ * (`/mentions-legales`, `/politique-de-confidentialite`) are `noindex`, so
+ * listing them would send Google conflicting signals; they stay out.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/contact", "/mentions-legales", "/politique-de-confidentialite"];
+  const staticRoutes = ["", "/contact"];
   const prestationRoutes = [
     ...prestations.map((p) => `/prestations/${p.slug}`),
     "/prestations/centrales-qti",

@@ -22,19 +22,19 @@ interface Category {
 const CATEGORIES: Category[] = [
   {
     key: "necessary",
-    title: "Strictly necessary",
-    body: "Required for the site to work — sign-in, security, page navigation. These can't be turned off.",
+    title: "Strictement nécessaires",
+    body: "Indispensables au fonctionnement du site : sécurité, navigation et mémorisation de votre choix de cookies. Ils ne peuvent pas être désactivés.",
     required: true,
   },
   {
     key: "analytics",
-    title: "Analytics",
-    body: "Anonymised usage stats so we know which pages help and which fall flat. No personal profile is built.",
+    title: "Mesure d'audience",
+    body: "Statistiques de fréquentation anonymisées, pour comprendre quelles pages sont utiles. Aucun profil personnel n'est constitué.",
   },
   {
     key: "marketing",
     title: "Marketing",
-    body: "Lets us measure ad performance and re-show content you didn't get to finish reading. Opt out anytime.",
+    body: "Permettent de mesurer la performance de nos communications et de vous proposer des contenus adaptés. Désactivable à tout moment.",
   },
 ];
 
@@ -116,12 +116,12 @@ export const CookiePreferencesModal = () => {
         >
           <header className="flex items-start justify-between gap-3">
             <h2 id={TITLE_ID} className="text-xl font-medium leading-tight">
-              Cookie preferences
+              Préférences de cookies
             </h2>
             <button
               type="button"
               onClick={closeModal}
-              aria-label="Close cookie preferences"
+              aria-label="Fermer les préférences de cookies"
               className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-foreground/10 text-foreground hover:bg-foreground/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
@@ -136,15 +136,14 @@ export const CookiePreferencesModal = () => {
           </header>
 
           <p className="text-sm leading-relaxed text-foreground/60">
-            Choose which categories of cookies we&apos;re allowed to use. You can
-            change this any time. See our{" "}
+            Choisissez les catégories de cookies que vous nous autorisez à
+            utiliser. Vous pouvez modifier ce choix à tout moment. Consultez
+            notre{" "}
             <Link
-              href="/privacy-policy"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/politique-de-confidentialite"
               className="text-foreground underline underline-offset-2"
             >
-              privacy policy
+              politique de confidentialité
             </Link>
             .
           </p>
@@ -187,13 +186,13 @@ export const CookiePreferencesModal = () => {
 
           <footer className="mt-1 flex flex-col-reverse gap-2 sm:flex-row sm:items-center sm:justify-between">
             <CookieButton variant="secondary" onClick={rejectAll}>
-              Reject all
+              Tout refuser
             </CookieButton>
             <div className="flex flex-col-reverse gap-2 sm:flex-row sm:items-center">
               <CookieButton variant="secondary" onClick={handleSave}>
-                Save preferences
+                Enregistrer mes préférences
               </CookieButton>
-              <CookieButton onClick={acceptAll}>Accept all</CookieButton>
+              <CookieButton onClick={acceptAll}>Tout accepter</CookieButton>
             </div>
           </footer>
         </animated.div>

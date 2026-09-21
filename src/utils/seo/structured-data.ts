@@ -6,6 +6,7 @@
  * Render the output inside a `<script type="application/ld+json">` tag.
  */
 
+import type { FaqItem } from "@/lib/faq-data";
 import { siteConfig } from "@/lib/site";
 
 /**
@@ -72,6 +73,25 @@ export function getLocalBusinessStructuredData(areaServed?: string) {
     areaServed: [...new Set(areas)].map((a) => ({
       "@type": "AdministrativeArea",
       name: a,
+    })),
+  };
+}
+
+/**
+ * FAQPage schema — mirrors the on-page FAQ so Google can surface the questions
+ * as a rich result. Emit once, on the page that renders the visible FAQ.
+ */
+export function getFaqStructuredData(faqs: FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.a,
+      },
     })),
   };
 }

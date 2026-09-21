@@ -10,10 +10,6 @@ export const metadata: Metadata = {
   robots: { index: false },
 };
 
-/*
- * ⚠️ Champ restant à compléter avant mise en ligne : nom du directeur de
- * publication (représentant légal de la SAS).
- */
 export default function MentionsLegalesPage() {
   return (
     <>
@@ -33,11 +29,13 @@ export default function MentionsLegalesPage() {
             <p className="leading-7 text-white/60">
               MISI — Maintenance Installation Sécurité Incendie
               <br />
-              Société par actions simplifiée (SAS)
+              Société par actions simplifiée (SAS) au capital de 500 €
               <br />
               Siège social : 22 lieu-dit Les Chevillots, 89150 Courtoin
               <br />
-              SIRET : 904 532 777 00029
+              RCS Sens 904 532 777 — SIRET : 904 532 777 00029 — Code APE 4669C
+              <br />
+              Directeur de la publication : Vincent Adobet, président
               <br />
               Téléphone : <a href="tel:+33762575678" className="text-red hover:underline">07 62 57 56 78</a>
               <br />
@@ -48,11 +46,11 @@ export default function MentionsLegalesPage() {
           <div>
             <h2 className="mb-3 text-xl font-bold text-white">Hébergement</h2>
             <p className="leading-7 text-white/60">
-              Ce site est hébergé par OVHcloud
+              Ce site est hébergé par Cloudflare, Inc.
               <br />
-              2 rue Kellermann, 59100 Roubaix, France
+              101 Townsend Street, San Francisco, CA 94107, États-Unis
               <br />
-              <a href="https://www.ovhcloud.com" className="text-red hover:underline" rel="noopener noreferrer" target="_blank">ovhcloud.com</a>
+              <a href="https://www.cloudflare.com" className="text-red hover:underline" rel="noopener noreferrer" target="_blank">cloudflare.com</a>
             </p>
           </div>
 

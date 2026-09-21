@@ -76,7 +76,7 @@ export function HeroSection() {
           className="mb-8 inline-flex items-center gap-1.5 rounded-full border border-red/20 bg-red/8 px-4 py-2 text-xs font-semibold text-red/90 backdrop-blur-sm"
         >
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red" />
-          Entreprise qualifiée — Techniciens expérimentés
+          Spécialiste sécurité incendie — Techniciens expérimentés
         </Inview>
 
         <AnimatedHeading

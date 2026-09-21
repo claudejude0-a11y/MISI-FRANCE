@@ -56,7 +56,9 @@ export function Header() {
           </Link>
           <button
             type="button"
-            aria-label="Ouvrir le menu"
+            aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
             className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 md:hidden"
           >
@@ -68,7 +70,11 @@ export function Header() {
       </header>
 
       {open && (
-        <div className="fixed inset-x-4 top-24 z-[999] flex flex-col gap-2 rounded-2xl border border-white/8 bg-charcoal/95 p-4 backdrop-blur-xl md:hidden">
+        <nav
+          id="mobile-menu"
+          aria-label="Menu principal"
+          className="fixed inset-x-4 top-24 z-[999] flex flex-col gap-2 rounded-2xl border border-white/8 bg-charcoal/95 p-4 backdrop-blur-xl md:hidden"
+        >
           <Link href="/#services" onClick={() => setOpen(false)} className="rounded-lg px-4 py-3 text-white/80">
             Prestations
           </Link>
@@ -85,7 +91,7 @@ export function Header() {
           >
             Demander un devis
           </Link>
-        </div>
+        </nav>
       )}
     </>
   );
