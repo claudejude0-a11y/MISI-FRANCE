@@ -12,7 +12,7 @@ import { IconCheckCircle } from "@/components/icons";
 
 const stats = [
   { num: "11", suffix: "+", label: "Types d'équipements" },
-  { num: "100", suffix: "%", label: "Conformité garantie" },
+  { num: "100", suffix: "%", label: "Interventions avec rapport" },
   { num: "48", suffix: "h", label: "Délai d'intervention" },
   { num: "24", suffix: "h", label: "Réponse devis" },
 ];
@@ -133,7 +133,7 @@ export function HeroSection() {
                 <CountUp to={Number(s.num)} />
                 <span className="text-red">{s.suffix}</span>
               </div>
-              <div className="mt-2 text-[11px] tracking-widest text-white/35 uppercase">{s.label}</div>
+              <div className="mt-2 text-[11px] tracking-widest text-white/60 uppercase">{s.label}</div>
             </div>
           ))}
         </Inview>

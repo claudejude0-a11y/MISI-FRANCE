@@ -56,7 +56,7 @@ export function ContactForm() {
   }
 
   const inputClass =
-    "w-full rounded-xl border border-white/8 bg-surface-2 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-red/50 focus:bg-surface-3 focus:ring-2 focus:ring-red/10";
+    "w-full rounded-xl border border-white/8 bg-surface-2 px-4 py-3 text-sm text-white placeholder:text-white/60 outline-none transition focus:border-red/50 focus:bg-surface-3 focus:ring-2 focus:ring-red/10";
 
   return (
     <div className="rounded-[28px] border border-white/8 bg-surface p-10">
@@ -130,7 +130,7 @@ export function ContactForm() {
             L&apos;envoi a échoué. Réessayez ou écrivez-nous à direction@misifrance.com
           </p>
         )}
-        <p className="mt-3 text-center text-xs text-white/35">
+        <p className="mt-3 text-center text-xs text-white/60">
           * Champs obligatoires — Réponse sous 24 h ouvrées. En envoyant ce
           formulaire, vous acceptez que vos informations soient utilisées pour
           traiter votre demande, conformément à notre{" "}

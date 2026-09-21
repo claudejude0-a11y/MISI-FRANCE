@@ -103,7 +103,7 @@ export default function PpmsPage() {
         <div className="relative mx-auto max-w-[1240px] px-8">
           <div className="grid items-center gap-16 md:grid-cols-2">
             <div>
-              <div className="font-tech mb-6 flex items-center gap-2 text-[11px] text-white/35">
+              <div className="font-tech mb-6 flex items-center gap-2 text-[11px] text-white/60">
                 <Link href="/" className="hover:text-white">Accueil</Link>
                 <span className="text-red/50">/</span>
                 <Link href="/#services" className="hover:text-white">Prestations</Link>

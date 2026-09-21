@@ -65,7 +65,7 @@ export const HomeView = () => {
 
       {/* CLIENTS — ils nous font confiance */}
       <section className="border-b border-white/8 py-14">
-        <p className="font-tech mb-9 text-center text-[11px] tracking-[0.15em] text-white/35 uppercase">
+        <p className="font-tech mb-9 text-center text-[11px] tracking-[0.15em] text-white/60 uppercase">
           Ils nous font confiance
         </p>
         <ClientsMarquee />

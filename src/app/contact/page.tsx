@@ -51,7 +51,7 @@ export default function ContactPage() {
                     <d.Icon width={19} height={19} />
                   </div>
                   <div>
-                    <h5 className="font-tech mb-1 text-[10px] font-medium tracking-[0.15em] text-white/35 uppercase">{d.title}</h5>
+                    <h5 className="font-tech mb-1 text-[10px] font-medium tracking-[0.15em] text-white/60 uppercase">{d.title}</h5>
                     <p className="text-sm text-white/60">{d.text}</p>
                   </div>
                 </RevealItem>

@@ -26,7 +26,7 @@ export function ZoneView({ z }: { z: Zone }) {
       <div className="relative overflow-hidden border-b border-white/8 pt-[140px] pb-20">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_0%_50%,rgba(230,48,48,0.1)_0%,transparent_60%)]" />
         <div className="relative mx-auto max-w-[1240px] px-8">
-          <div className="font-tech mb-6 flex items-center gap-2 text-[11px] text-white/35">
+          <div className="font-tech mb-6 flex items-center gap-2 text-[11px] text-white/60">
             <Link href="/" className="hover:text-white">Accueil</Link>
             <span className="text-red/50">/</span>
             <span className="text-white/50">Zones d&apos;intervention</span>

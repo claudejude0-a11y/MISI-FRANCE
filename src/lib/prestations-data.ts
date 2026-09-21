@@ -301,7 +301,7 @@ export const prestations: Prestation[] = [
     ],
     gallery: [
       { src: "/images/pcf-fermetalu.jpg", alt: "Porte coupe-feu acier — installation ERP" },
-      { src: "/images/pcf-coulissante.png", alt: "Porte coulissante coupe-feu" },
+      { src: "/images/pcf-coulissante.jpg", alt: "Porte coulissante coupe-feu" },
       { src: "/images/pcf-battante-ei60.jpg", alt: "Porte battante coupe-feu EI60 structure renforcée" },
     ],
     regleTitle: "Obligations réglementaires",
