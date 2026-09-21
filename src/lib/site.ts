@@ -57,11 +57,12 @@ export const siteConfig = {
      * délivré avant ce clic. Autrement dit, un changement non suivi d'activation
      * fait disparaître silencieusement les demandes des prospects.
      *
-     * Choix assumé (2026-07-08) : les formulaires arrivent sur la boîte réellement
-     * relevée par le gérant, et non sur `direction@misifrance.com` (qui reste
-     * l'adresse de contact affichée publiquement). À rebasculer le jour où
-     * `direction@` sera relevée — sans oublier de la réactiver côté FormSubmit.
+     * 2026-09-21 : basculé sur `direction@misifrance.com` (boîte désormais
+     * relevée), qui est aussi l'adresse de contact affichée publiquement.
+     * ⚠️ FormSubmit exige une (ré)activation : le premier envoi vers cette
+     * adresse déclenche un e-mail de confirmation à cliquer dans la boîte
+     * `direction@` — aucun message n'est délivré tant que ce n'est pas fait.
      */
-    recipient: "jude.claude@misifrance.com",
+    recipient: "direction@misifrance.com",
   },
 } as const;
