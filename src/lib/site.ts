@@ -14,7 +14,7 @@ export const siteConfig = {
    * Public origin, no trailing slash. Drives canonical URLs, OG tags, the
    * sitemap, and JSON-LD. Set `NEXT_PUBLIC_SITE_URL` in production.
    */
-  url: publicEnv.NEXT_PUBLIC_SITE_URL ?? "https://www.misifrance.com",
+  url: publicEnv.NEXT_PUBLIC_SITE_URL ?? "https://www.misifrance.fr",
   /** Default Open Graph / Twitter share image (path under `public/`). */
   ogImage: "/open-graph.png",
   /** Compte X/Twitter officiel — laisser `undefined` tant qu'il n'existe pas
