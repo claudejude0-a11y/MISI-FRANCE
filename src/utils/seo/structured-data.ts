@@ -22,7 +22,9 @@ export function getSiteStructuredData() {
         "@id": `${siteConfig.url}/#organization`,
         name: siteConfig.name,
         url: siteConfig.url,
-        logo: `${siteConfig.url}/android-icon-192x192.png`,
+        // Logo carré sur fond transparent (rend proprement sur le fond blanc du
+        // panneau Google). 512×512 > minimum 112×112 recommandé par Google.
+        logo: `${siteConfig.url}/logo.png`,
       },
       {
         "@type": "WebSite",
@@ -60,6 +62,7 @@ export function getLocalBusinessStructuredData(areaServed?: string) {
     description,
     url,
     image: `${url}${ogImage}`,
+    logo: `${url}/logo.png`,
     email: business.email,
     ...(business.phone ? { telephone: business.phone } : {}),
     address: {

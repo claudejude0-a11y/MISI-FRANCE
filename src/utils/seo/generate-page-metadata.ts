@@ -52,7 +52,15 @@ export function generateMetadata({
       url,
       siteName,
       // Dimensions must match the real asset; 1200×630 is the ideal size.
-      images: [{ url: ogImage, width: 1200, height: 630 }],
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          type: "image/png",
+          alt: "MISI — sécurité incendie dans l'Yonne (89) et en Île-de-France",
+        },
+      ],
       locale: "fr_FR",
       type: "website",
     },
@@ -63,7 +71,12 @@ export function generateMetadata({
       // Only emit the handle when one is configured — avoids pointing the card
       // at a non-existent account.
       ...(twitterHandle ? { site: twitterHandle, creator: twitterHandle } : {}),
-      images: [ogImage],
+      images: [
+        {
+          url: ogImage,
+          alt: "MISI — sécurité incendie dans l'Yonne (89) et en Île-de-France",
+        },
+      ],
     },
     icons: {
       icon: [
