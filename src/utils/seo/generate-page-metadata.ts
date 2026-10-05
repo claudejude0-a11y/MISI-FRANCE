@@ -26,6 +26,8 @@ interface MetadataProps {
   siteName?: string;
 }
 
+const typo = (s: string) => s.replace(/'/g, "’");
+
 export function generateMetadata({
   title = siteConfig.name,
   description = siteConfig.description,
@@ -35,6 +37,11 @@ export function generateMetadata({
   author = siteConfig.author,
   siteName = siteConfig.name,
 }: MetadataProps = {}): Metadata {
+  // Apostrophe typographique (’) plutôt que droite (') : React encode « ' » en
+  // `&#x27;` dans les balises <meta>, que Google a affiché tel quel (« l&#39;Yonne »)
+  // dans l'extrait de recherche. « ’ » n'est jamais encodé — et c'est la typo FR.
+  title = typo(title);
+  description = typo(description);
   return {
     // Resolves every relative URL below to an absolute one.
     metadataBase: new URL(siteConfig.url),
@@ -58,7 +65,7 @@ export function generateMetadata({
           width: 1200,
           height: 630,
           type: "image/png",
-          alt: "MISI — sécurité incendie dans l'Yonne (89) et en Île-de-France",
+          alt: "MISI — sécurité incendie dans l’Yonne (89) et en Île-de-France",
         },
       ],
       locale: "fr_FR",
@@ -74,7 +81,7 @@ export function generateMetadata({
       images: [
         {
           url: ogImage,
-          alt: "MISI — sécurité incendie dans l'Yonne (89) et en Île-de-France",
+          alt: "MISI — sécurité incendie dans l’Yonne (89) et en Île-de-France",
         },
       ],
     },

@@ -16,33 +16,35 @@ export function Footer() {
           </div>
           <div>
             <h5 className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Prestations</h5>
-            <div className="flex flex-col gap-2.5 text-sm text-white/45">
-              <Link href="/prestations/extincteurs" className="transition hover:text-white">Extincteurs</Link>
-              <Link href="/prestations/ria" className="transition hover:text-white">RIA</Link>
-              <Link href="/prestations/baes" className="transition hover:text-white">BAES</Link>
-              <Link href="/prestations/hydrants" className="transition hover:text-white">Poteaux incendie</Link>
-              <Link href="/prestations/portes-coupe-feu" className="transition hover:text-white">Portes coupe-feu</Link>
-            </div>
+            {/* Listes <ul>/<li> : des liens frères sans séparateur se collaient dans
+                l'extrait Google (« 07 62 57 56 78direction@…comFormulaire »). */}
+            <ul className="flex flex-col gap-2.5 text-sm text-white/45">
+              <li><Link href="/prestations/extincteurs" className="transition hover:text-white">Extincteurs</Link></li>
+              <li><Link href="/prestations/ria" className="transition hover:text-white">RIA</Link></li>
+              <li><Link href="/prestations/baes" className="transition hover:text-white">BAES</Link></li>
+              <li><Link href="/prestations/hydrants" className="transition hover:text-white">Poteaux incendie</Link></li>
+              <li><Link href="/prestations/portes-coupe-feu" className="transition hover:text-white">Portes coupe-feu</Link></li>
+            </ul>
           </div>
           <div>
             <h5 className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Autres services</h5>
-            <div className="flex flex-col gap-2.5 text-sm text-white/45">
-              <Link href="/prestations/desenfumage" className="transition hover:text-white">Désenfumage</Link>
-              <Link href="/prestations/centrales-qti" className="transition hover:text-white">CATI</Link>
-              <Link href="/prestations/baches" className="transition hover:text-white">Bâches incendie</Link>
-              <Link href="/prestations/ppms" className="transition hover:text-white">PPMS</Link>
-              <Link href="/prestations/reflex-o-feu" className="transition hover:text-white">Réflex O Feu</Link>
-              <Link href="/prestations/plans-signaletique" className="transition hover:text-white">Plans &amp; signalétique</Link>
-            </div>
+            <ul className="flex flex-col gap-2.5 text-sm text-white/45">
+              <li><Link href="/prestations/desenfumage" className="transition hover:text-white">Désenfumage</Link></li>
+              <li><Link href="/prestations/centrales-qti" className="transition hover:text-white">CATI</Link></li>
+              <li><Link href="/prestations/baches" className="transition hover:text-white">Bâches incendie</Link></li>
+              <li><Link href="/prestations/ppms" className="transition hover:text-white">PPMS</Link></li>
+              <li><Link href="/prestations/reflex-o-feu" className="transition hover:text-white">Réflex O Feu</Link></li>
+              <li><Link href="/prestations/plans-signaletique" className="transition hover:text-white">Plans &amp; signalétique</Link></li>
+            </ul>
           </div>
           <div>
             <h5 className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Contact</h5>
-            <div className="flex flex-col gap-2.5 text-sm text-white/45">
-              <a href="tel:+33762575678" className="font-tech transition hover:text-white">07 62 57 56 78</a>
-              <a href="mailto:direction@misifrance.com" className="transition hover:text-white">direction@misifrance.com</a>
-              <Link href="/contact" className="transition hover:text-white">Formulaire de contact</Link>
-              <Link href="/#devis" className="transition hover:text-white">Demander un devis</Link>
-            </div>
+            <ul className="flex flex-col gap-2.5 text-sm text-white/45">
+              <li><a href="tel:+33762575678" className="font-tech transition hover:text-white">07 62 57 56 78</a></li>
+              <li><a href="mailto:direction@misifrance.com" className="transition hover:text-white">direction@misifrance.com</a></li>
+              <li><Link href="/contact" className="transition hover:text-white">Formulaire de contact</Link></li>
+              <li><Link href="/#devis" className="transition hover:text-white">Demander un devis</Link></li>
+            </ul>
           </div>
         </div>
         <div className="flex flex-col items-center justify-between gap-2 border-t border-white/8 py-5 text-xs text-white/60 md:flex-row">
