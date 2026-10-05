@@ -79,13 +79,16 @@ export function generateMetadata({
       ],
     },
     icons: {
+      // Noms versionnés (cache par URL côté Google) et tailles multiples de
+      // 48 px, comme le recommande Google pour le favicon des résultats.
       icon: [
         { url: "/favicon.ico" },
-        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/icon-misi-48.png", sizes: "48x48", type: "image/png" },
+        { url: "/icon-misi-96.png", sizes: "96x96", type: "image/png" },
+        { url: "/icon-misi-192.png", sizes: "192x192", type: "image/png" },
       ],
       apple: [
-        { url: "/apple-icon-180x180.png", sizes: "180x180", type: "image/png" },
+        { url: "/apple-icon-misi-180.png", sizes: "180x180", type: "image/png" },
       ],
     },
     manifest: "/manifest.json",

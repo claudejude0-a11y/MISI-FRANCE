@@ -15,8 +15,11 @@ export const siteConfig = {
    * sitemap, and JSON-LD. Set `NEXT_PUBLIC_SITE_URL` in production.
    */
   url: publicEnv.NEXT_PUBLIC_SITE_URL ?? "https://www.misifrance.fr",
-  /** Default Open Graph / Twitter share image (path under `public/`). */
-  ogImage: "/open-graph.png",
+  /** Default Open Graph / Twitter share image (path under `public/`).
+   *  Nom versionné : Google/WhatsApp/Facebook mettent les images en cache PAR
+   *  URL. Pour changer l'image, créer un nouveau fichier avec un nouveau nom
+   *  (ne pas écraser l'ancien), sinon l'ancienne image reste affichée. */
+  ogImage: "/og-misi-2026.png",
   /** Compte X/Twitter officiel — laisser `undefined` tant qu'il n'existe pas
    *  (évite de pointer les Twitter Cards vers un handle inexistant). */
   twitterHandle: undefined as string | undefined,
