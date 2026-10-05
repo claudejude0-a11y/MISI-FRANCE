@@ -92,6 +92,9 @@ export function generateMetadata({
       ],
     },
     manifest: "/manifest.json",
+    verification: {
+      other: { "msvalidate.01": siteConfig.siteVerification.bing },
+    },
     robots: {
       index: true,
       follow: true,

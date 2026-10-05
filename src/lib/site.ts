@@ -24,6 +24,11 @@ export const siteConfig = {
    *  (évite de pointer les Twitter Cards vers un handle inexistant). */
   twitterHandle: undefined as string | undefined,
   author: "MISI",
+  /** Codes de vérification des outils pour webmasters (balises <meta>).
+   *  Ne pas supprimer : Bing revérifie régulièrement la présence de la balise. */
+  siteVerification: {
+    bing: "86B8EF9730D692ABD1E8ACBF8A35663F",
+  },
   /** Browser theme-color (address bar / PWA). */
   themeColor: "#0D0D0D",
   /**
