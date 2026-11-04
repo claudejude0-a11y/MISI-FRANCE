@@ -52,6 +52,10 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${onest.variable} ${archivo.variable} ${jetbrainsMono.variable} bg-charcoal text-white`}>
+        {/* Sans JavaScript, les animations d'apparition ne partent pas : on affiche le contenu. */}
+        <noscript>
+          <style>{`[style*="opacity:0"]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
