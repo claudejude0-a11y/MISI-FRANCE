@@ -12,7 +12,7 @@ import { Header } from "@/components/site/Header";
 import { generateMetadata as buildMetadata } from "@/utils/seo/generate-page-metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Alarme Type 4 & Alarme PPMS — Équipements de mise en sûreté | MISI",
+  title: "Alarme Type 4 & PPMS — Yonne & Île-de-France | MISI",
   description:
     "MISI installe et maintient l'alarme Type 4 pour l'évacuation incendie et l'alarme PPMS pour le confinement en cas d'attentat, d'intrusion ou de risque majeur.",
   url: "/prestations/ppms",

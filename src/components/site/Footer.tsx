@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { zones } from "@/lib/zones-data";
+
 export function Footer() {
   return (
     <footer className="border-t border-white/8 pt-20">
       <div className="mx-auto max-w-[1240px] px-8">
-        <div className="grid grid-cols-1 gap-14 pb-14 md:grid-cols-[2fr_1fr_1fr_1fr]">
-          <div>
+        <div className="grid grid-cols-1 gap-14 pb-14 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-[1.6fr_1fr_1fr_1fr_1.2fr] xl:gap-10">
+          <div className="md:col-span-2 lg:col-span-4 xl:col-span-1">
             <Link href="/" className="flex items-center">
               <Image src="/images/logo-misi.png" alt="MISI" width={48} height={48} className="h-12 w-auto object-contain" />
             </Link>
@@ -35,6 +37,14 @@ export function Footer() {
               <li><Link href="/prestations/ppms" className="transition hover:text-white">PPMS</Link></li>
               <li><Link href="/prestations/reflex-o-feu" className="transition hover:text-white">Réflex O Feu</Link></li>
               <li><Link href="/prestations/plans-signaletique" className="transition hover:text-white">Plans &amp; signalétique</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h5 className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Zones d&apos;intervention</h5>
+            <ul className="flex flex-col gap-2.5 text-sm text-white/45">
+              {zones.map((z) => (
+                <li key={z.slug}><Link href={`/zones/${z.slug}`} className="transition hover:text-white">{z.name}</Link></li>
+              ))}
             </ul>
           </div>
           <div>

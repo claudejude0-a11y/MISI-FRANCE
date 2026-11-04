@@ -45,7 +45,7 @@ export const prestations: Prestation[] = [
   {
     slug: "extincteurs",
     title: "Extincteurs",
-    titleTag: "Extincteurs — Vérification & Maintenance | MISI",
+    titleTag: "Vérification d'extincteurs — Yonne & Île-de-France | MISI",
     label: "Premier secours",
     breadcrumbLabel: "Extincteurs",
     badgeText: "Vérification & maintenance",
@@ -95,7 +95,7 @@ export const prestations: Prestation[] = [
   {
     slug: "ria",
     title: "RIA — Robinets d'Incendie Armés",
-    titleTag: "RIA — Robinets d'Incendie Armés | MISI",
+    titleTag: "RIA — Robinets d'Incendie Armés, Yonne & Île-de-France | MISI",
     label: "Eau sous pression",
     breadcrumbLabel: "RIA — Robinets d'Incendie Armés",
     badgeText: "Installation & entretien",
@@ -144,7 +144,7 @@ export const prestations: Prestation[] = [
   {
     slug: "baes",
     title: "BAES — Blocs d'éclairage de sécurité",
-    titleTag: "BAES — Blocs d'éclairage de sécurité | MISI",
+    titleTag: "BAES — Éclairage de sécurité, Yonne & Île-de-France | MISI",
     label: "Éclairage de sécurité",
     breadcrumbLabel: "BAES — Blocs d'éclairage de sécurité",
     badgeText: "Vérification & remplacement",
@@ -192,7 +192,7 @@ export const prestations: Prestation[] = [
   {
     slug: "hydrants",
     title: "Poteaux incendie",
-    titleTag: "Poteaux incendie | MISI",
+    titleTag: "Poteaux incendie — Yonne & Île-de-France | MISI",
     label: "DECI",
     breadcrumbLabel: "Poteaux incendie",
     badgeText: "Contrôle & essai hydraulique",
@@ -238,7 +238,7 @@ export const prestations: Prestation[] = [
   {
     slug: "baches",
     title: "Bâches incendie",
-    titleTag: "Bâches incendie | MISI",
+    titleTag: "Bâches incendie — Yonne & Île-de-France | MISI",
     label: "Réserve d'eau",
     breadcrumbLabel: "Bâches incendie",
     badgeText: "Inspection & contrôle",
@@ -285,7 +285,7 @@ export const prestations: Prestation[] = [
   {
     slug: "portes-coupe-feu",
     title: "Portes coupe-feu (PCF)",
-    titleTag: "Portes coupe-feu (PCF) | MISI",
+    titleTag: "Portes coupe-feu (PCF) — Yonne & Île-de-France | MISI",
     label: "Compartimentage",
     breadcrumbLabel: "Portes coupe-feu (PCF)",
     badgeText: "Installation & maintenance",
@@ -334,7 +334,7 @@ export const prestations: Prestation[] = [
   {
     slug: "desenfumage",
     title: "Désenfumage",
-    titleTag: "Désenfumage — exutoires et ouvrants | MISI",
+    titleTag: "Désenfumage — Exutoires et ouvrants, Yonne & Île-de-France | MISI",
     label: "Désenfumage",
     breadcrumbLabel: "Désenfumage",
     badgeText: "Vérification & entretien",
@@ -382,7 +382,7 @@ export const prestations: Prestation[] = [
   {
     slug: "reflex-o-feu",
     title: "Réflex O Feu — Extinction pour armoires électriques",
-    titleTag: "Réflex O Feu — Extinction incendie armoires électriques | MISI",
+    titleTag: "Réflex O Feu — Armoires électriques, Yonne & Île-de-France | MISI",
     label: "Armoires électriques",
     breadcrumbLabel: "Réflex O Feu",
     badgeText: "Détection & extinction automatique",
