@@ -21,6 +21,10 @@ export type PrestationListItem = { text: string };
 export type Prestation = {
   slug: string;
   title: string;
+  /** Titre principal de la page, avec le service recherché par les clients. */
+  h1: string;
+  /** Complète « MISI est une entreprise spécialisée dans… ». */
+  serviceNoun: string;
   titleTag: string;
   label: string;
   breadcrumbLabel: string;
@@ -45,6 +49,8 @@ export const prestations: Prestation[] = [
   {
     slug: "extincteurs",
     title: "Extincteurs",
+    h1: "Vérification et maintenance d'extincteurs",
+    serviceNoun: "la vérification et la maintenance d'extincteurs",
     titleTag: "Vérification d'extincteurs — Yonne & Île-de-France | MISI",
     label: "Premier secours",
     breadcrumbLabel: "Extincteurs",
@@ -95,6 +101,8 @@ export const prestations: Prestation[] = [
   {
     slug: "ria",
     title: "RIA — Robinets d'Incendie Armés",
+    h1: "Installation et entretien des RIA incendie",
+    serviceNoun: "l'installation et l'entretien des RIA (robinets d'incendie armés)",
     titleTag: "RIA — Robinets d'Incendie Armés, Yonne & Île-de-France | MISI",
     label: "Eau sous pression",
     breadcrumbLabel: "RIA — Robinets d'Incendie Armés",
@@ -144,6 +152,8 @@ export const prestations: Prestation[] = [
   {
     slug: "baes",
     title: "BAES — Blocs d'éclairage de sécurité",
+    h1: "Vérification et remplacement des BAES",
+    serviceNoun: "la vérification et le remplacement des BAES (blocs d'éclairage de sécurité)",
     titleTag: "BAES — Éclairage de sécurité, Yonne & Île-de-France | MISI",
     label: "Éclairage de sécurité",
     breadcrumbLabel: "BAES — Blocs d'éclairage de sécurité",
@@ -192,6 +202,8 @@ export const prestations: Prestation[] = [
   {
     slug: "hydrants",
     title: "Poteaux incendie",
+    h1: "Contrôle des poteaux incendie",
+    serviceNoun: "le contrôle et l'essai hydraulique des poteaux incendie",
     titleTag: "Poteaux incendie — Yonne & Île-de-France | MISI",
     label: "DECI",
     breadcrumbLabel: "Poteaux incendie",
@@ -238,6 +250,8 @@ export const prestations: Prestation[] = [
   {
     slug: "baches",
     title: "Bâches incendie",
+    h1: "Inspection et contrôle des bâches incendie",
+    serviceNoun: "l'inspection et le contrôle des bâches incendie",
     titleTag: "Bâches incendie — Yonne & Île-de-France | MISI",
     label: "Réserve d'eau",
     breadcrumbLabel: "Bâches incendie",
@@ -285,6 +299,8 @@ export const prestations: Prestation[] = [
   {
     slug: "portes-coupe-feu",
     title: "Portes coupe-feu (PCF)",
+    h1: "Installation et maintenance de portes coupe-feu",
+    serviceNoun: "l'installation et la maintenance de portes coupe-feu",
     titleTag: "Portes coupe-feu (PCF) — Yonne & Île-de-France | MISI",
     label: "Compartimentage",
     breadcrumbLabel: "Portes coupe-feu (PCF)",
@@ -334,6 +350,8 @@ export const prestations: Prestation[] = [
   {
     slug: "desenfumage",
     title: "Désenfumage",
+    h1: "Vérification et entretien du désenfumage",
+    serviceNoun: "la vérification et l'entretien des installations de désenfumage",
     titleTag: "Désenfumage — Exutoires et ouvrants, Yonne & Île-de-France | MISI",
     label: "Désenfumage",
     breadcrumbLabel: "Désenfumage",
@@ -382,6 +400,8 @@ export const prestations: Prestation[] = [
   {
     slug: "reflex-o-feu",
     title: "Réflex O Feu — Extinction pour armoires électriques",
+    h1: "Réflex O Feu — Extinction pour armoires électriques",
+    serviceNoun: "la détection et l'extinction automatique pour armoires électriques",
     titleTag: "Réflex O Feu — Armoires électriques, Yonne & Île-de-France | MISI",
     label: "Armoires électriques",
     breadcrumbLabel: "Réflex O Feu",

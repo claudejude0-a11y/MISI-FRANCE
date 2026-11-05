@@ -47,6 +47,21 @@ export const zonePrestationLinks: { slug: string; label: string }[] = [
   { slug: "centrales-qti", label: "CATI — centrales" },
 ];
 
+/** Départements prioritaires déclarés par MISI (intervention possible partout en France). */
+export const priorityDepartments = [
+  "Yonne (89)",
+  "Seine-et-Marne (77)",
+  "Yvelines (78)",
+  "Aube (10)",
+  "Loiret (45)",
+  "Paris (75)",
+  "Essonne (91)",
+  "Hauts-de-Seine (92)",
+  "Seine-Saint-Denis (93)",
+  "Val-de-Marne (94)",
+  "Val-d'Oise (95)",
+];
+
 export const zones: Zone[] = [
   {
     slug: "yonne-89",
@@ -179,19 +194,28 @@ export const zones: Zone[] = [
     slug: "ile-de-france",
     name: "Île-de-France",
     kind: "region",
-    titleTag: "Sécurité incendie en Île-de-France — MISI",
+    titleTag: "Entreprise de sécurité incendie en Île-de-France (75, 77, 78, 91 à 95) — MISI",
     metaDescription:
       "MISI intervient en Île-de-France pour la maintenance et l'installation d'équipements de sécurité incendie : extincteurs, RIA, BAES, désenfumage, alarme. Devis gratuit.",
     label: "Zone d'intervention étendue",
     h1: "Sécurité incendie en Île-de-France",
     intro:
-      "Au-delà de l'Yonne, MISI étend ses prestations de sécurité incendie à l'Île-de-France, notamment dans le sud francilien limitrophe du département.",
+      "MISI, entreprise de sécurité incendie, intervient dans toute l'Île-de-France : Paris, Seine-et-Marne, Yvelines, Essonne, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne et Val-d'Oise.",
     h2: "Vos équipements de sécurité incendie en Île-de-France",
     paragraphs: [
-      "Aux portes de l'Île-de-France, MISI intervient auprès des entreprises, ERP et collectivités franciliens pour la vérification, la maintenance et l'installation de leurs équipements de sécurité incendie. Nous couvrons en priorité le sud de la région — Seine-et-Marne et Essonne notamment — proches de notre implantation dans l'Yonne.",
+      "Aux portes de l'Île-de-France, MISI intervient auprès des entreprises, ERP et collectivités franciliens pour la vérification, la maintenance et l'installation de leurs équipements de sécurité incendie. Nous couvrons les huit départements franciliens : 75, 77, 78, 91, 92, 93, 94 et 95.",
       "Extincteurs, RIA, BAES, désenfumage, portes coupe-feu, alarme incendie : nous assurons la conformité complète de votre établissement, avec rapport d'intervention et suivi de votre registre de sécurité.",
     ],
-    communes: ["Seine-et-Marne (77)", "Essonne (91)", "Fontainebleau", "Montereau-Fault-Yonne", "Nemours", "Melun"],
+    communes: [
+      "Paris (75)",
+      "Seine-et-Marne (77)",
+      "Yvelines (78)",
+      "Essonne (91)",
+      "Hauts-de-Seine (92)",
+      "Seine-Saint-Denis (93)",
+      "Val-de-Marne (94)",
+      "Val-d'Oise (95)",
+    ],
     areaServed: "Île-de-France",
   },
 ];

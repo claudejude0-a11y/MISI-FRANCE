@@ -150,7 +150,7 @@ export default function PlansSignaletiquePage() {
               <Eyebrow className="mb-6">Plans &amp; signalétique</Eyebrow>
               <AnimatedHeading tag="h1" className="mt-4 mb-5 flex items-center gap-3 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
                 <IconMapPin width={32} height={32} className="text-red shrink-0" />
-                Plans &amp; signalétique de sécurité
+                Plans d&apos;évacuation &amp; signalétique de sécurité
               </AnimatedHeading>
               <p className="max-w-[560px] text-lg text-white/60">
                 Relevé sur site, conception, impression et pose de vos plans d&apos;évacuation, plans d&apos;intervention, plans de chambre, consignes de sécurité et de votre signalétique incendie — conformes aux normes en vigueur (NF X08-070, NF EN ISO 7010).

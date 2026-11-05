@@ -50,7 +50,21 @@ export const siteConfig = {
       country: "FR",
     },
     /** Zones desservies (du plus prioritaire au moins prioritaire). */
-    areaServed: ["Yonne", "Bourgogne-Franche-Comté", "Île-de-France"],
+    areaServed: [
+      "Yonne",
+      "Seine-et-Marne",
+      "Yvelines",
+      "Aube",
+      "Loiret",
+      "Paris",
+      "Essonne",
+      "Hauts-de-Seine",
+      "Seine-Saint-Denis",
+      "Val-de-Marne",
+      "Val-d'Oise",
+      "Île-de-France",
+      "France",
+    ],
   },
   forms: {
     /**

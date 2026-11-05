@@ -11,7 +11,7 @@ import { HomeView } from "@/views/home";
 export const metadata: Metadata = buildMetadata({
   title: "Sécurité incendie dans l'Yonne (89) & Île-de-France — MISI",
   description:
-    "MISI, entreprise de sécurité incendie dans l'Yonne (89) et en Île-de-France : maintenance, installation et vérification de vos extincteurs, RIA, BAES, désenfumage, alarme et PPMS. Devis gratuit sous 24 h.",
+    "MISI, entreprise de sécurité incendie dans l'Yonne (89), en Île-de-France et partout en France : maintenance, installation et vérification de vos extincteurs, RIA, BAES, désenfumage, alarme et PPMS. Devis gratuit sous 24 h.",
   url: "/",
 });
 

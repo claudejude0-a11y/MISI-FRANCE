@@ -210,7 +210,7 @@ export const HomeView = () => {
                   "Réponse sous 24h ouvrées",
                   "Conseil réglementaire inclus",
                   "Tarification transparente",
-                  "Intervention partout en région",
+                  "Intervention partout en France",
                 ].map((perk) => (
                   <div key={perk} className="flex items-center gap-3 text-sm text-white/60">
                     <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-strong" />

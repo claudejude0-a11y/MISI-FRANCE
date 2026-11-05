@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { zones } from "@/lib/zones-data";
+import { priorityDepartments, zones } from "@/lib/zones-data";
 
 export function FooterMini() {
   return (
@@ -18,6 +18,7 @@ export function FooterMini() {
             </li>
           ))}
         </ul>
+        <p className="mt-3 text-center md:text-left">Intervention partout en France, en priorité : {priorityDepartments.join(", ")}.</p>
       </nav>
       <div className="mx-auto flex max-w-[1240px] flex-col items-center justify-between gap-2 px-8 text-sm text-white/60 md:flex-row">
         <span>© 2026 MISI — Maintenance Installation Sécurité Incendie</span>

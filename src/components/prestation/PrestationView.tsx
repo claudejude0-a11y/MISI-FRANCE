@@ -37,7 +37,7 @@ export function PrestationView({ p }: { p: Prestation }) {
                 className="mt-4 mb-5 flex items-center gap-3 text-4xl font-extrabold tracking-tight text-white md:text-5xl"
               >
                 <p.Icon width={32} height={32} className="text-red shrink-0" />
-                {p.title}
+                {p.h1}
               </AnimatedHeading>
               <p className="max-w-[560px] text-lg text-white/60">{p.intro}</p>
             </div>
@@ -55,6 +55,10 @@ export function PrestationView({ p }: { p: Prestation }) {
                 {para}
               </p>
             ))}
+            <p className="mb-5 leading-7 text-white/60">
+              MISI est une entreprise spécialisée dans {p.serviceNoun}. Nous intervenons dans l&apos;Yonne (89), en
+              Île-de-France, dans l&apos;Aube (10), le Loiret (45) et partout en France.
+            </p>
 
             <div className="my-8 grid grid-cols-1 gap-4 rounded-2xl border border-white/8 bg-surface-2 p-4 sm:grid-cols-2">
               {p.gallery.map((img, i) => (
