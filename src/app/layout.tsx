@@ -9,8 +9,7 @@ import { getSiteStructuredData } from "@/utils/seo/structured-data";
 
 import { AnimatedBackground } from "@/components/common/AnimatedBackground";
 import { LazyCookie } from "@/components/common/Cookie";
-import { CustomCursor } from "@/components/common/CustomCursor";
-import { EmberField } from "@/components/common/EmberField";
+import { DeferredEffects } from "@/components/common/DeferredEffects";
 import { AdaptiveGrid } from "@/components/common/grid";
 import { PageTransition } from "@/components/common/PageTransition";
 import { ReducedMotion } from "@/components/common/reduced-motion";
@@ -67,8 +66,7 @@ export default function RootLayout({
           <ReducedMotion />
           <LazyCookie />
           <AnimatedBackground />
-          <EmberField />
-          <CustomCursor />
+          <DeferredEffects />
           <ScrollProgress />
           <div className="relative z-10">
             <PageTransition>{children}</PageTransition>

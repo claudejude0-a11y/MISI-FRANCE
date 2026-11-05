@@ -17,7 +17,7 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h5 className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Prestations</h5>
+            <p className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Prestations</p>
             {/* Listes <ul>/<li> : des liens frères sans séparateur se collaient dans
                 l'extrait Google (« 07 62 57 56 78direction@…comFormulaire »). */}
             <ul className="flex flex-col gap-2.5 text-sm text-white/45">
@@ -29,7 +29,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h5 className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Autres services</h5>
+            <p className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Autres services</p>
             <ul className="flex flex-col gap-2.5 text-sm text-white/45">
               <li><Link href="/prestations/desenfumage" className="transition hover:text-white">Désenfumage</Link></li>
               <li><Link href="/prestations/centrales-qti" className="transition hover:text-white">CATI</Link></li>
@@ -40,7 +40,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h5 className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Zones d&apos;intervention</h5>
+            <p className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Zones d&apos;intervention</p>
             <ul className="flex flex-col gap-2.5 text-sm text-white/45">
               {zones.map((z) => (
                 <li key={z.slug}><Link href={`/zones/${z.slug}`} className="transition hover:text-white">{z.name}</Link></li>
@@ -48,7 +48,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h5 className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Contact</h5>
+            <p className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Contact</p>
             <ul className="flex flex-col gap-2.5 text-sm text-white/45">
               <li><a href="tel:+33762575678" className="font-tech transition hover:text-white">07 62 57 56 78</a></li>
               <li><a href="mailto:direction@misifrance.com" className="transition hover:text-white">direction@misifrance.com</a></li>

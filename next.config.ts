@@ -18,9 +18,12 @@ const nextConfig: NextConfig = {
   },
 
   images: {
-    // Static export has no server to run the image optimizer at request
-    // time — ship the originals as-is.
-    unoptimized: true,
+    // Export statique : pas d'optimiseur serveur. Variantes WebP pré-générées par
+    // scripts/optimize-images.mjs (mêmes largeurs que ci-dessous).
+    loader: "custom",
+    loaderFile: "./src/lib/image-loader.ts",
+    deviceSizes: [640, 1080, 1920],
+    imageSizes: [128, 256],
   },
 
   // React Compiler (automatic memoisation) is an opt-in performance win.

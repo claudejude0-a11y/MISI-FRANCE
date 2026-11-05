@@ -20,7 +20,7 @@ export default function NotFound() {
             La page que vous recherchez n&apos;existe pas ou a été déplacée. Revenez à l&apos;accueil ou consultez nos prestations de sécurité incendie.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link href="/" className="rounded-full bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-red-dark">
+            <Link href="/" className="rounded-full bg-red-strong px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-red-dark">
               Retour à l&apos;accueil
             </Link>
             <Link href="/#services" className="rounded-full border border-white/10 bg-white/6 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10">

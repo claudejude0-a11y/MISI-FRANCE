@@ -50,7 +50,7 @@ export function Header() {
           </ul>
           <Link
             href="/#devis"
-            className="hidden rounded-full bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-red-dark md:inline-flex"
+            className="hidden rounded-full bg-red-strong px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-red-dark md:inline-flex"
           >
             Demander un devis
           </Link>
@@ -87,7 +87,7 @@ export function Header() {
           <Link
             href="/#devis"
             onClick={() => setOpen(false)}
-            className="rounded-full bg-red px-6 py-3 text-center text-sm font-semibold text-white"
+            className="rounded-full bg-red-strong px-6 py-3 text-center text-sm font-semibold text-white"
           >
             Demander un devis
           </Link>

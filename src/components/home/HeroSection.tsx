@@ -75,7 +75,7 @@ export function HeroSection() {
           style={{ transformStyle: "preserve-3d" }}
           className="mb-8 inline-flex items-center gap-1.5 rounded-full border border-red/20 bg-red/8 px-4 py-2 text-xs font-semibold text-red/90 backdrop-blur-sm"
         >
-          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red" />
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-strong" />
           Spécialiste sécurité incendie — Techniciens expérimentés
         </Inview>
 
@@ -109,7 +109,7 @@ export function HeroSection() {
           config={{ tension: 200, friction: 24 }}
           className="mt-10 flex flex-wrap justify-center gap-3"
         >
-          <AnimatedButton href="#devis" className="inline-flex items-center gap-2 rounded-full bg-red px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_0_0_rgba(230,48,48,0.4)] hover:shadow-[0_10px_30px_0_rgba(230,48,48,0.35)]">
+          <AnimatedButton href="#devis" className="inline-flex items-center gap-2 rounded-full bg-red-strong px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_0_0_rgba(230,48,48,0.4)] hover:shadow-[0_10px_30px_0_rgba(230,48,48,0.35)]">
             <IconCheckCircle width={15} height={15} />
             Demander un devis gratuit
           </AnimatedButton>

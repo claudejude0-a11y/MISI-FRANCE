@@ -51,7 +51,7 @@ export default function ContactPage() {
                     <d.Icon width={19} height={19} />
                   </div>
                   <div>
-                    <h5 className="font-tech mb-1 text-[10px] font-medium tracking-[0.15em] text-white/60 uppercase">{d.title}</h5>
+                    <p className="font-tech mb-1 text-[10px] font-medium tracking-[0.15em] text-white/60 uppercase">{d.title}</p>
                     <p className="text-sm text-white/60">{d.text}</p>
                   </div>
                 </RevealItem>
@@ -59,7 +59,7 @@ export default function ContactPage() {
             </div>
 
             <div className="mt-9 rounded-r-xl border-l-[3px] border-red bg-red/6 px-5 py-4.5">
-              <h4 className="mb-1.5 text-xs font-bold tracking-widest text-red uppercase">Urgence ?</h4>
+              <h3 className="mb-1.5 text-xs font-bold tracking-widest text-red-light uppercase">Urgence ?</h3>
               <p className="text-sm text-white/70">
                 Pour toute situation nécessitant une intervention rapide (équipement défaillant avant une commission de sécurité, sinistre…), mentionnez-le dans votre message ou appelez-nous directement.
               </p>

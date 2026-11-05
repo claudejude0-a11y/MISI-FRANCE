@@ -35,7 +35,7 @@ export function PrestationHeroPhoto({
         className="absolute inset-0"
         innerClassName="absolute inset-0"
       >
-        <Image src={heroImage} alt={heroAlt} fill className="object-cover grayscale-[10%]" priority />
+        <Image src={heroImage} alt={heroAlt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover grayscale-[10%]" priority />
       </SpringTrigger>
     </div>
   );

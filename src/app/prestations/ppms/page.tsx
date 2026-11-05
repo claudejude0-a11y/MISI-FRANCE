@@ -162,7 +162,7 @@ export default function PpmsPage() {
             <SimpleList items={type4Concerned} />
 
             <div className="my-8 rounded-r-xl border-l-[3px] border-red bg-red/6 px-6 py-5">
-              <h4 className="font-tech mb-2 text-[11px] font-medium tracking-[0.15em] text-red uppercase">Obligations réglementaires</h4>
+              <h3 className="font-tech mb-2 text-[11px] font-medium tracking-[0.15em] text-red-light uppercase">Obligations réglementaires</h3>
               <p className="text-sm leading-6 text-white/70">
                 La norme <strong className="text-white">NF S 32-001</strong> fixe les exigences techniques : niveau sonore minimum 10 dB au-dessus du bruit ambiant, alimentation de secours assurant au moins <strong className="text-white">12 heures de veille et 5 minutes en alarme</strong>. Des <strong className="text-white">vérifications trimestrielles</strong> doivent être effectuées par le personnel formé, et un <strong className="text-white">contrôle annuel</strong> par un technicien qualifié est obligatoire, avec rapport versé au registre de sécurité. La responsabilité pénale de l&apos;exploitant est engagée en cas de défaut. En ERP, des exercices d&apos;évacuation sont également obligatoires au moins tous les 6 mois (article MS 47 de l&apos;arrêté du 25 juin 1980).
               </p>
@@ -208,7 +208,7 @@ export default function PpmsPage() {
             </p>
 
             <div className="my-8 rounded-r-xl border-l-[3px] border-red bg-red/6 px-6 py-5">
-              <h4 className="font-tech mb-2 text-[11px] font-medium tracking-[0.15em] text-red uppercase">Obligations réglementaires</h4>
+              <h3 className="font-tech mb-2 text-[11px] font-medium tracking-[0.15em] text-red-light uppercase">Obligations réglementaires</h3>
               <p className="text-sm leading-6 text-white/70">
                 La norme <strong className="text-white">NF S 61-942</strong> impose que le déclencheur PPMS soit de couleur noire, le flash lumineux bleu, et le signal sonore clairement différencié de l&apos;alarme incendie. La circulaire <strong className="text-white">n° 2023-041 du 9 mars 2023</strong> (Éducation nationale) unifie le PPMS risques majeurs et attentat-intrusion, avec mise en conformité requise avant septembre 2028. <strong className="text-white">Deux exercices annuels minimum</strong> sont obligatoires dans les établissements scolaires.
               </p>
@@ -220,7 +220,7 @@ export default function PpmsPage() {
 
           <aside className="flex flex-col gap-4">
             <div className="rounded-[20px] border border-white/8 bg-surface p-6">
-              <h4 className="mb-4 text-sm font-semibold text-white">Alarme Type 4</h4>
+              <h3 className="mb-4 text-sm font-semibold text-white">Alarme Type 4</h3>
               <ul className="flex flex-col">
                 {["Installation déclencheurs & sirènes", "Mise en service & essais", "Vérification annuelle NF S 32-001", "Maintenance corrective"].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 border-b border-white/8 py-2.5 text-sm text-white/60 last:border-0">
@@ -231,7 +231,7 @@ export default function PpmsPage() {
               </ul>
             </div>
             <div className="rounded-[20px] border border-white/8 bg-surface p-6">
-              <h4 className="mb-4 text-sm font-semibold text-white">Alarme PPMS</h4>
+              <h3 className="mb-4 text-sm font-semibold text-white">Alarme PPMS</h3>
               <ul className="flex flex-col">
                 {["Déclencheur noir NF S 61-942", "Flash bleu malentendants", "Messages vocaux personnalisés", "Option radio sans fil LoRa", "Vérification annuelle", "Exercices réglementaires"].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 border-b border-white/8 py-2.5 text-sm text-white/60 last:border-0">
@@ -242,14 +242,14 @@ export default function PpmsPage() {
               </ul>
             </div>
             <div className="rounded-[20px] border border-red/20 bg-gradient-to-br from-red/15 to-red/5 p-6">
-              <h4 className="mb-2 text-sm font-semibold text-white">Demander un devis</h4>
+              <h3 className="mb-2 text-sm font-semibold text-white">Demander un devis</h3>
               <p className="mb-4 text-sm text-white/45">Réponse sous 24h — Gratuit &amp; sans engagement</p>
-              <Link href="/#devis" className="block rounded-xl bg-red py-3.5 text-center text-sm font-semibold text-white transition hover:bg-red-dark">
+              <Link href="/#devis" className="block rounded-xl bg-red-strong py-3.5 text-center text-sm font-semibold text-white transition hover:bg-red-dark">
                 Obtenir un devis
               </Link>
             </div>
             <div className="rounded-[20px] border border-white/8 bg-surface p-6">
-              <h4 className="mb-4 text-sm font-semibold text-white">Autres prestations</h4>
+              <h3 className="mb-4 text-sm font-semibold text-white">Autres prestations</h3>
               <ul className="flex flex-col">
                 {[
                   { slug: "centrales-qti", label: "CATI" },

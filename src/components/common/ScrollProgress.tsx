@@ -20,7 +20,7 @@ export function ScrollProgress() {
 
   return (
     <animated.div
-      className="fixed top-0 left-0 z-[1001] h-[2px] bg-red"
+      className="fixed top-0 left-0 z-[1001] h-[2px] bg-red-strong"
       style={{ width: spring.width.to((w) => `${w}%`) }}
     />
   );

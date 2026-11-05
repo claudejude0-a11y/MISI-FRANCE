@@ -61,9 +61,9 @@ export function ZoneView({ z }: { z: Zone }) {
               config={{ tension: 220, friction: 24 }}
               className="my-8 rounded-2xl border border-white/8 bg-surface-2 p-6"
             >
-              <h4 className="font-tech mb-4 text-[11px] font-medium tracking-[0.15em] text-red uppercase">
+              <h3 className="font-tech mb-4 text-[11px] font-medium tracking-[0.15em] text-red-light uppercase">
                 Communes &amp; secteurs desservis
-              </h4>
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {z.communes.map((commune) => (
                   <span
@@ -103,14 +103,14 @@ export function ZoneView({ z }: { z: Zone }) {
 
           <aside className="flex flex-col gap-4">
             <div className="rounded-[20px] border border-red/20 bg-gradient-to-br from-red/15 to-red/5 p-6">
-              <h4 className="mb-2 text-sm font-semibold text-white">Demander un devis</h4>
+              <h3 className="mb-2 text-sm font-semibold text-white">Demander un devis</h3>
               <p className="mb-4 text-sm text-white/45">Réponse sous 24h — Gratuit &amp; sans engagement</p>
-              <Link href="/#devis" className="block rounded-xl bg-red py-3.5 text-center text-sm font-semibold text-white transition hover:bg-red-dark">
+              <Link href="/#devis" className="block rounded-xl bg-red-strong py-3.5 text-center text-sm font-semibold text-white transition hover:bg-red-dark">
                 Obtenir un devis
               </Link>
             </div>
             <div className="rounded-[20px] border border-white/8 bg-surface p-6">
-              <h4 className="mb-4 text-sm font-semibold text-white">Autres zones d&apos;intervention</h4>
+              <h3 className="mb-4 text-sm font-semibold text-white">Autres zones d&apos;intervention</h3>
               <ul className="flex flex-col">
                 {otherZones.map((other) => (
                   <li key={other.slug} className="flex items-center gap-2.5 border-b border-white/8 py-2.5 text-sm last:border-0">

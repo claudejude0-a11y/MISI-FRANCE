@@ -17,7 +17,8 @@ export function AnimatedBackground() {
   const t = useRef(0);
 
   useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    // Orbes figées sur petit écran : animation coûteuse pour un effet décoratif.
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce), (max-width: 1023px)");
     setReduced(mq.matches);
     const onChange = () => setReduced(mq.matches);
     mq.addEventListener("change", onChange);
@@ -40,12 +41,11 @@ export function AnimatedBackground() {
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       {/* Ambient photo backdrop — fixed, desaturated, very low opacity so content stays legible */}
-      <div className="absolute inset-0 opacity-[0.09] grayscale contrast-125">
+      <div className="absolute inset-0 hidden opacity-[0.09] grayscale contrast-125 lg:block">
         <Image
           src="/images/bg-ambient.jpg"
           alt=""
           fill
-          priority
           className="object-cover object-[center_25%]"
         />
       </div>

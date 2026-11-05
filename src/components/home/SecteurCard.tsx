@@ -38,7 +38,7 @@ export function SecteurCard({
           <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-red/8 text-red">
             {icon}
           </div>
-          <h4 className="mb-2 font-semibold text-white">{title}</h4>
+          <h3 className="mb-2 font-semibold text-white">{title}</h3>
           <p className="text-sm text-white/60">{text}</p>
         </Hover>
       </div>

@@ -5,6 +5,9 @@
   --foreground: #ffffff;
   --red: #e63030;
   --red-dark: #b82020;
+  /* Variantes lisibles (WCAG AA) : fond sous texte blanc, petit texte sur fond sombre. */
+  --red-strong: #d92626;
+  --red-light: #ff6b6b;
   --charcoal: #0d0d0d;
   --surface: #141414;
   --surface-2: #1c1c1c;
@@ -20,6 +23,8 @@
   --color-foreground: var(--foreground);
   --color-red: var(--red);
   --color-red-dark: var(--red-dark);
+  --color-red-strong: var(--red-strong);
+  --color-red-light: var(--red-light);
   --color-charcoal: var(--charcoal);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);

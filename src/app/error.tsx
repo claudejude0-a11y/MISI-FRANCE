@@ -29,7 +29,7 @@ export default function Error({
         <button
           type="button"
           onClick={reset}
-          className="rounded-full bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-red-dark"
+          className="rounded-full bg-red-strong px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-red-dark"
         >
           Réessayer
         </button>

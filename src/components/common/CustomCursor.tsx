@@ -78,7 +78,7 @@ export function CustomCursor() {
         style={{
           transform: dotSpring.x.to((x) => `translate3d(${x - 3}px, ${dotSpring.y.get() - 3}px, 0)`),
         }}
-        className="absolute h-1.5 w-1.5 rounded-full bg-red"
+        className="absolute h-1.5 w-1.5 rounded-full bg-red-strong"
       />
       <animated.div
         style={{

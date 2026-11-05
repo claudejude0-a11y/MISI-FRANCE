@@ -121,7 +121,7 @@ function SectionImage({ src, alt }: { src: string; alt: string }) {
 function RegBlock({ children }: { children: React.ReactNode }) {
   return (
     <div className="my-8 rounded-r-xl border-l-[3px] border-red bg-red/6 px-6 py-5">
-      <h4 className="font-tech mb-2 text-[11px] font-medium tracking-[0.15em] text-red uppercase">Obligation réglementaire</h4>
+      <h3 className="font-tech mb-2 text-[11px] font-medium tracking-[0.15em] text-red-light uppercase">Obligation réglementaire</h3>
       <p className="text-sm leading-6 text-white/70">{children}</p>
     </div>
   );
@@ -251,7 +251,7 @@ export default function PlansSignaletiquePage() {
 
           <aside className="flex flex-col gap-4">
             <div className="rounded-[20px] border border-white/8 bg-surface p-6">
-              <h4 className="mb-4 text-sm font-semibold text-white">Nos plans &amp; signalétique</h4>
+              <h3 className="mb-4 text-sm font-semibold text-white">Nos plans &amp; signalétique</h3>
               <ul className="flex flex-col">
                 {["Plan d'évacuation NF X08-070", "Plan d'intervention MS 41", "Plan de chambre (hôtellerie)", "Consignes de sécurité", "Panneaux NF EN ISO 7010", "Relevé, impression & pose"].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 border-b border-white/8 py-2.5 text-sm text-white/60 last:border-0">
@@ -262,14 +262,14 @@ export default function PlansSignaletiquePage() {
               </ul>
             </div>
             <div className="rounded-[20px] border border-red/20 bg-gradient-to-br from-red/15 to-red/5 p-6">
-              <h4 className="mb-2 text-sm font-semibold text-white">Demander un devis</h4>
+              <h3 className="mb-2 text-sm font-semibold text-white">Demander un devis</h3>
               <p className="mb-4 text-sm text-white/45">Réponse sous 24h — Gratuit &amp; sans engagement</p>
-              <Link href="/#devis" className="block rounded-xl bg-red py-3.5 text-center text-sm font-semibold text-white transition hover:bg-red-dark">
+              <Link href="/#devis" className="block rounded-xl bg-red-strong py-3.5 text-center text-sm font-semibold text-white transition hover:bg-red-dark">
                 Obtenir un devis
               </Link>
             </div>
             <div className="rounded-[20px] border border-white/8 bg-surface p-6">
-              <h4 className="mb-4 text-sm font-semibold text-white">Autres prestations</h4>
+              <h3 className="mb-4 text-sm font-semibold text-white">Autres prestations</h3>
               <ul className="flex flex-col">
                 {[
                   { slug: "extincteurs", label: "Extincteurs" },

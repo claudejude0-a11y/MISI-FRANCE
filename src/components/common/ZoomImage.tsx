@@ -44,6 +44,7 @@ export function ZoomImage({
             src={src}
             alt={alt}
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className={contain ? `object-contain p-3 ${imgClassName ?? ""}` : `object-cover ${imgClassName ?? ""}`}
           />
         </Hover>

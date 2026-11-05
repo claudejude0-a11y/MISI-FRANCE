@@ -125,7 +125,7 @@ export function DevisForm() {
         <button
           type="submit"
           disabled={status === "sending" || status === "sent"}
-          className="mt-4.5 flex w-full items-center justify-center gap-2 rounded-xl bg-red py-3.5 text-sm font-semibold text-white transition hover:bg-red-dark disabled:opacity-70"
+          className="mt-4.5 flex w-full items-center justify-center gap-2 rounded-xl bg-red-strong py-3.5 text-sm font-semibold text-white transition hover:bg-red-dark disabled:opacity-70"
         >
           {status === "idle" && "Envoyer ma demande"}
           {status === "sending" && "Envoi en cours…"}

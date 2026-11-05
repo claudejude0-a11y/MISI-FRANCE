@@ -131,10 +131,10 @@ function BentoCard({ card, index }: { card: (typeof cards)[number]; index: numbe
           className="relative flex h-full flex-col overflow-hidden rounded-[28px] border border-white/8 bg-surface p-8 hover:border-red/20 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
         >
           <div className={`relative -mx-8 -mt-8 mb-6 overflow-hidden rounded-t-[28px] ${card.size === "large" ? "h-[230px]" : "h-[190px]"}`}>
-            <Image src={card.image} alt="" fill className="object-cover transition duration-500 group-hover:scale-[1.04]" />
+            <Image src={card.image} alt="" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition duration-500 group-hover:scale-[1.04]" />
             <div className="absolute inset-x-0 bottom-0 h-[55%] bg-gradient-to-t from-surface to-transparent" />
           </div>
-          <span className="font-tech mb-2 text-[10px] font-medium tracking-[0.15em] text-red uppercase">{card.tag}</span>
+          <span className="font-tech mb-2 text-[10px] font-medium tracking-[0.15em] text-red-light uppercase">{card.tag}</span>
           <h3 className="mb-2 text-lg font-semibold text-white">{card.title}</h3>
           <p className="mb-4 text-sm text-white/60">{card.text}</p>
           <span className="mt-auto flex items-center gap-1.5 text-sm font-semibold text-red">

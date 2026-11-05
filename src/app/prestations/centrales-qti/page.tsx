@@ -111,7 +111,7 @@ export default function CatiPage() {
             <p className="mb-5 leading-7 text-white/60"><strong className="text-white">Une solution évolutive.</strong> La CATI s&apos;adapte à tout type d&apos;établissement — du petit commerce à l&apos;ERP de grande capacité. Elle intègre les équipements existants et peut accueillir de nouveaux points sans refonte de l&apos;infrastructure.</p>
 
             <div className="my-8 rounded-r-xl border-l-[3px] border-red bg-red/6 px-6 py-5">
-              <h4 className="font-tech mb-2 text-[11px] font-medium tracking-[0.15em] text-red uppercase">Obligations réglementaires</h4>
+              <h3 className="font-tech mb-2 text-[11px] font-medium tracking-[0.15em] text-red-light uppercase">Obligations réglementaires</h3>
               <p className="text-sm leading-6 text-white/70">
                 Les obligations de détection automatique et de supervision varient selon le type d&apos;ERP et sa catégorie — elles sont notamment renforcées dans les établissements avec locaux à sommeil (types J, O, U, R…). La CATI fait l&apos;objet de vérifications à plusieurs niveaux cumulatifs : mensuelles et trimestrielles par l&apos;exploitant, et annuelle complète par un technicien qualifié avec rapport versé au registre de sécurité. Nous réalisons un audit personnalisé pour déterminer le niveau de supervision requis dans votre établissement.
               </p>
@@ -130,7 +130,7 @@ export default function CatiPage() {
 
           <aside className="flex flex-col gap-4">
             <div className="rounded-[20px] border border-white/8 bg-surface p-6">
-              <h4 className="mb-4 text-sm font-semibold text-white">Nos prestations CATI</h4>
+              <h3 className="mb-4 text-sm font-semibold text-white">Nos prestations CATI</h3>
               <ul className="flex flex-col">
                 {["Audit & étude personnalisée", "Installation complète", "Supervision équipements incendie", "Intégration vidéosurveillance", "Vérification annuelle", "Télésurveillance 24h/24"].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 border-b border-white/8 py-2.5 text-sm text-white/60 last:border-0">
@@ -141,14 +141,14 @@ export default function CatiPage() {
               </ul>
             </div>
             <div className="rounded-[20px] border border-red/20 bg-gradient-to-br from-red/15 to-red/5 p-6">
-              <h4 className="mb-2 text-sm font-semibold text-white">Demander un devis</h4>
+              <h3 className="mb-2 text-sm font-semibold text-white">Demander un devis</h3>
               <p className="mb-4 text-sm text-white/45">Réponse sous 24h — Gratuit &amp; sans engagement</p>
-              <Link href="/#devis" className="block rounded-xl bg-red py-3.5 text-center text-sm font-semibold text-white transition hover:bg-red-dark">
+              <Link href="/#devis" className="block rounded-xl bg-red-strong py-3.5 text-center text-sm font-semibold text-white transition hover:bg-red-dark">
                 Obtenir un devis
               </Link>
             </div>
             <div className="rounded-[20px] border border-white/8 bg-surface p-6">
-              <h4 className="mb-4 text-sm font-semibold text-white">Autres prestations</h4>
+              <h3 className="mb-4 text-sm font-semibold text-white">Autres prestations</h3>
               <ul className="flex flex-col">
                 {[
                   { slug: "desenfumage", label: "Désenfumage" },

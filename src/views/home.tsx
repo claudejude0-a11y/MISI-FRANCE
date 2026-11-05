@@ -125,7 +125,7 @@ export const HomeView = () => {
                   >
                     <span className="font-tech text-2xl font-bold text-red/40 tabular-nums">{item.n}</span>
                     <div>
-                      <h4 className="mb-1 font-semibold text-white">{item.title}</h4>
+                      <h3 className="mb-1 font-semibold text-white">{item.title}</h3>
                       <p className="text-sm text-white/60">{item.text}</p>
                     </div>
                   </Inview>
@@ -134,7 +134,7 @@ export const HomeView = () => {
               <div className="mt-8 flex gap-2">
                 {["/images/band1.jpg", "/images/extincteurs.jpg", "/images/band3.jpg"].map((src) => (
                   <div key={src} className="relative h-20 flex-1 overflow-hidden rounded-lg opacity-60 transition hover:opacity-100">
-                    <Image src={src} alt="" fill className="object-cover" />
+                    <Image src={src} alt="" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
                   </div>
                 ))}
               </div>
@@ -156,7 +156,7 @@ export const HomeView = () => {
                   </div>
                 ))}
               </div>
-              <Link href="#devis" className="mt-6 block w-full rounded-xl bg-red py-3.5 text-center text-sm font-semibold text-white transition hover:bg-red-dark">
+              <Link href="#devis" className="mt-6 block w-full rounded-xl bg-red-strong py-3.5 text-center text-sm font-semibold text-white transition hover:bg-red-dark">
                 Demander un devis
               </Link>
             </Inview>
@@ -188,7 +188,7 @@ export const HomeView = () => {
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl border border-white/8 bg-surface-2 text-red">
                   <IconArrowRight width={20} height={20} />
                 </div>
-                <h4 className="mb-2 font-semibold text-white">{step.title}</h4>
+                <h3 className="mb-2 font-semibold text-white">{step.title}</h3>
                 <p className="text-sm text-white/60">{step.text}</p>
               </Inview>
             ))}
@@ -213,7 +213,7 @@ export const HomeView = () => {
                   "Intervention partout en région",
                 ].map((perk) => (
                   <div key={perk} className="flex items-center gap-3 text-sm text-white/60">
-                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red" />
+                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-strong" />
                     {perk}
                   </div>
                 ))}
