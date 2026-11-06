@@ -13,7 +13,7 @@ const cards = [
     slug: "extincteurs",
     tag: "Premier secours",
     title: "Extincteurs",
-    text: "Vérification annuelle, recharge, maintenance approfondie et remplacement, selon les normes en vigueur.",
+    text: "Vente, installation, vérification annuelle, recharge et maintenance approfondie, selon les normes en vigueur.",
     image: "/images/extincteurs.jpg",
     size: "large",
   },

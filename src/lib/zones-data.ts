@@ -36,7 +36,7 @@ export type Zone = {
 
 /** Services linked from every zone page (slug under `/prestations/`). */
 export const zonePrestationLinks: { slug: string; label: string }[] = [
-  { slug: "extincteurs", label: "Maintenance & installation d'extincteurs" },
+  { slug: "extincteurs", label: "Vente, installation & maintenance d'extincteurs" },
   { slug: "ria", label: "RIA — Robinets d'Incendie Armés" },
   { slug: "baes", label: "BAES — éclairage de sécurité" },
   { slug: "desenfumage", label: "Désenfumage" },

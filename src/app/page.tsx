@@ -11,7 +11,7 @@ import { HomeView } from "@/views/home";
 export const metadata: Metadata = buildMetadata({
   title: "Entreprise de sécurité incendie en France : Paris, Île-de-France, Yonne | MISI",
   description:
-    "Entreprise de sécurité incendie : maintenance et vérification d'extincteurs, RIA, BAES, désenfumage. Paris, Île-de-France, Yonne et partout en France. Devis gratuit.",
+    "Entreprise de sécurité incendie : vente et pose d'extincteurs, maintenance RIA, BAES, désenfumage. Paris, Île-de-France, Yonne et partout en France. Devis gratuit.",
   url: "/",
 });
 
