@@ -13,6 +13,10 @@
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Images optimisées, regénérées sous un autre nom seulement si l'image change de nom.
+/opt/*
+  Cache-Control: public, max-age=2592000
+
 # Images — cache d'un mois (renommer le fichier pour forcer un rafraîchissement).
 /images/*
   Cache-Control: public, max-age=2592000

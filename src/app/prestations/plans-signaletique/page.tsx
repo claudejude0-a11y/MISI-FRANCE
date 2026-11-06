@@ -193,6 +193,12 @@ export default function PlansSignaletiquePage() {
             <p className="mb-5 leading-7 text-white/60">
               Le plan d&apos;évacuation est une carte affichée à chaque niveau du bâtiment, à proximité des accès et des points de circulation. Il permet à toute personne — occupant, visiteur, client — de comprendre en quelques secondes où elle se trouve et par où évacuer.
             </p>
+            <p className="mb-5 leading-7 text-white/60">
+              À lire aussi :{" "}
+              <Link href="/guides/plan-evacuation-obligatoire" className="text-white underline hover:text-red-light">
+                Un plan d&apos;évacuation est-il obligatoire ?
+              </Link>
+            </p>
             <SectionImage src="/images/plans/plan-evacuation.jpg" alt="Plan d'évacuation normalisé NF X08-070" />
             <h3 className="mt-9 mb-3.5 text-lg font-semibold text-white">Ce que contient le plan</h3>
             <DetailBlock items={evacuationContenu} />
