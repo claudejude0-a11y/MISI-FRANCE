@@ -9,9 +9,11 @@ import { IconArrowRight } from "@/components/icons";
 import { PrestationHeroPhoto } from "@/components/prestation/PrestationHeroPhoto";
 import { FooterMini } from "@/components/site/FooterMini";
 import { Header } from "@/components/site/Header";
+import { guides } from "@/lib/guides-data";
 import type { Prestation } from "@/lib/prestations-data";
 
 export function PrestationView({ p }: { p: Prestation }) {
+  const guide = guides.find((g) => g.prestation === p.slug);
   return (
     <>
       <Header />
@@ -60,6 +62,14 @@ export function PrestationView({ p }: { p: Prestation }) {
               MISI est une entreprise spécialisée dans {p.serviceNoun}. Nous intervenons partout en France, notamment à Paris, en
               Île-de-France, dans l&apos;Yonne (89), l&apos;Aube (10) et le Loiret (45).
             </p>
+            {guide && (
+              <p className="mb-5 leading-7 text-white/60">
+                À lire aussi :{" "}
+                <Link href={`/guides/${guide.slug}`} className="text-white underline hover:text-red-light">
+                  {guide.title}
+                </Link>
+              </p>
+            )}
 
             <div className="my-8 grid grid-cols-1 gap-4 rounded-2xl border border-white/8 bg-surface-2 p-4 sm:grid-cols-2">
               {p.gallery.map((img, i) => (

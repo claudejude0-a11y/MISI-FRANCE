@@ -16,19 +16,19 @@ export const metadata: Metadata = buildMetadata({
 
 const interventions = [
   {
-    place: "Établissement à La Courneuve (93)",
+    place: "EHPAD à La Courneuve (93)",
     work: "Vérification annuelle des extincteurs et vérification semestrielle des BAES : un passage tous les 6 mois pour l'éclairage de sécurité.",
   },
   {
-    place: "Château de Vaux-le-Vicomte (77)",
+    place: "Château en Seine-et-Marne (77)",
     work: "Maintenance de la détection incendie : déclencheurs manuels et signaux sonores d'évacuation.",
   },
   {
-    place: "Grand site classé ICPE",
+    place: "Site classé ICPE à Gournay-Loizé (79)",
     work: "Vérification des extincteurs et des poteaux incendie.",
   },
   {
-    place: "Site classé ICPE, secteur d'Angoulême",
+    place: "Site classé ICPE à Roullet-Saint-Estèphe (16)",
     work: "Vérification des extincteurs et des RIA.",
   },
 ];

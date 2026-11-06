@@ -26,6 +26,9 @@ export function FooterMini() {
         <a href="tel:+33762575678" className="font-semibold text-white transition hover:text-red-light">
           07 62 57 56 78
         </a>
+        <Link href="/guides" className="transition hover:text-white">
+          Guides et questions
+        </Link>
         <Link href="/" className="text-red transition hover:text-white">
           ← Retour à l&apos;accueil
         </Link>

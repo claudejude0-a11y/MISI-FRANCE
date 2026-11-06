@@ -26,6 +26,10 @@ E-mail : direction@misifrance.com
 - [Yonne (89)](https://www.misifrance.fr/zones/yonne-89)
 - [Île-de-France](https://www.misifrance.fr/zones/ile-de-france)
 
+## Guides
+
+- [Vos questions sur la sécurité incendie](https://www.misifrance.fr/guides)
+
 ## Contact
 
 - [Formulaire de contact](https://www.misifrance.fr/contact)

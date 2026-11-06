@@ -12,7 +12,7 @@ export const faqs: FaqItem[] = [
   },
   {
     q: "À quelle fréquence mes équipements doivent-ils être contrôlés ?",
-    a: "Cela dépend de l'équipement : contrôle annuel pour les extincteurs et RIA, vérification mensuelle et annuelle pour les BAES, vérification annuelle pour le désenfumage et les portes coupe-feu. Nous établissons un calendrier adapté à votre établissement lors du premier audit.",
+    a: "Cela dépend de l'équipement et du bâtiment : vérification annuelle pour les extincteurs, contrôles mensuels, semestriels et annuels pour les BAES, vérification annuelle pour le désenfumage en ERP. Nous établissons un calendrier adapté à votre établissement. Le détail est dans nos guides.",
   },
   {
     q: "Que risque-t-on en cas de non-conformité ?",
