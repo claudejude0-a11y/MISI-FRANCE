@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Eyebrow } from "@/components/common/Eyebrow";
@@ -30,6 +31,37 @@ const interventions = [
   {
     place: "Site classé ICPE à Roullet-Saint-Estèphe (16)",
     work: "Vérification des extincteurs et des RIA.",
+  },
+];
+
+const photos = [
+  {
+    src: "/images/terrain/tableau-alarme-type-4.jpg",
+    alt: "Tableau d'alarme incendie de type 4 avec l'étiquette de vérification MISI",
+    caption: "Tableau d'alarme de type 4, avec notre étiquette de vérification",
+    width: 960,
+    height: 930,
+  },
+  {
+    src: "/images/terrain/ria-extincteurs.jpg",
+    alt: "Robinet d'incendie armé et extincteurs",
+    caption: "RIA et extincteurs",
+    width: 1280,
+    height: 853,
+  },
+  {
+    src: "/images/terrain/alarme-detection.jpg",
+    alt: "Centrale d'alarme, déclencheur manuel et diffuseurs d'alarme incendie",
+    caption: "Alarme et détection incendie",
+    width: 1280,
+    height: 853,
+  },
+  {
+    src: "/images/terrain/vehicules.jpg",
+    alt: "Deux véhicules d'intervention rouges de MISI",
+    caption: "Nos véhicules d'intervention",
+    width: 1280,
+    height: 960,
   },
 ];
 
@@ -67,6 +99,25 @@ export default function AProposPage() {
                 Nous intervenons sur des sites variés : établissements recevant du public, sites patrimoniaux et
                 sites industriels classés ICPE.
               </p>
+            </div>
+
+            <div>
+              <h2 className="mb-5 text-2xl font-bold text-white">Sur le terrain</h2>
+              <ul className="grid gap-4 md:grid-cols-2">
+                {photos.map((photo) => (
+                  <li key={photo.src} className="overflow-hidden rounded-2xl border border-white/8 bg-surface">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      width={photo.width}
+                      height={photo.height}
+                      sizes="(max-width: 768px) 100vw, 440px"
+                      className="aspect-[4/3] w-full object-cover"
+                    />
+                    <p className="p-4 text-sm text-white/60">{photo.caption}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div>
