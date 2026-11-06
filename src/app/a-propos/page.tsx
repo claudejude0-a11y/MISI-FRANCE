@@ -27,12 +27,12 @@ const interventions: { place: string; work: string; logo?: { src: string; alt: s
   },
   {
     place: "Site classé ICPE à Gournay-Loizé (79)",
-    logo: { src: "/images/clients/scaprim.jpg", alt: "Logo Groupe SCAPRIM" },
+    logo: { src: "/images/clients/scaprim-logo.jpg", alt: "Logo Groupe SCAPRIM" },
     work: "Vérification des extincteurs et des poteaux incendie.",
   },
   {
     place: "Site classé ICPE à Roullet-Saint-Estèphe (16)",
-    logo: { src: "/images/clients/scaprim.jpg", alt: "Logo Groupe SCAPRIM" },
+    logo: { src: "/images/clients/scaprim-logo.jpg", alt: "Logo Groupe SCAPRIM" },
     work: "Vérification des extincteurs et des RIA.",
   },
 ];
@@ -136,7 +136,7 @@ export default function AProposPage() {
                 {interventions.map((item) => (
                   <li key={item.place} className="rounded-2xl border border-white/8 bg-surface p-6">
                     {item.logo && (
-                      <Image src={item.logo.src} alt={item.logo.alt} width={110} height={42} className="mb-3 h-10 w-auto rounded bg-white p-1" />
+                      <Image src={item.logo.src} alt={item.logo.alt} width={160} height={64} sizes="160px" className="mb-3 h-16 w-auto rounded bg-white p-1.5" />
                     )}
                     <h3 className="mb-2 font-semibold text-white">{item.place}</h3>
                     <p className="text-sm leading-6 text-white/60">{item.work}</p>
