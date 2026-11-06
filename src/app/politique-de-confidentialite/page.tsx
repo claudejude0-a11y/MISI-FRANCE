@@ -54,9 +54,9 @@ export default function ConfidentialitePage() {
           </div>
 
           <div>
-            <h2 className="mb-3 text-xl font-bold text-white">Cookies</h2>
+            <h2 className="mb-3 text-xl font-bold text-white">Cookies et mesure d&apos;audience</h2>
             <p className="leading-7 text-white/60">
-              Ce site n&apos;utilise pas de cookies publicitaires ni de traceurs tiers à des fins de suivi. Seuls des cookies strictement techniques peuvent être déposés pour le bon fonctionnement du site.
+              Ce site n&apos;utilise pas de cookies publicitaires ni de traceurs de suivi. Pour mesurer sa fréquentation, il utilise Cloudflare Web Analytics, qui fournit des statistiques agrégées sans cookie et sans suivi individuel des visiteurs.
             </p>
           </div>
 

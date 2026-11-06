@@ -29,6 +29,8 @@ export const siteConfig = {
   siteVerification: {
     bing: "86B8EF9730D692ABD1E8ACBF8A35663F",
   },
+  /** Jeton public de Cloudflare Web Analytics (visible dans le code de chaque page). */
+  cloudflareAnalyticsToken: "7cc86c99ff5d4a2ca5d8d6fa62121ca1",
   /** Browser theme-color (address bar / PWA). */
   themeColor: "#0D0D0D",
   /**

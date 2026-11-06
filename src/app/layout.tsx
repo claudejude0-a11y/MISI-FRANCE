@@ -1,14 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, JetBrains_Mono, Onest } from "next/font/google";
+import Script from "next/script";
 
 import {
   generateMetadata,
   generateViewport,
 } from "@/utils/seo/generate-page-metadata";
+import { siteConfig } from "@/lib/site";
 import { getSiteStructuredData } from "@/utils/seo/structured-data";
 
 import { AnimatedBackground } from "@/components/common/AnimatedBackground";
-import { LazyCookie } from "@/components/common/Cookie";
 import { DeferredEffects } from "@/components/common/DeferredEffects";
 import { AdaptiveGrid } from "@/components/common/grid";
 import { PageTransition } from "@/components/common/PageTransition";
@@ -70,7 +71,6 @@ export default function RootLayout({
           </a>
           <AdaptiveGrid />
           <ReducedMotion />
-          <LazyCookie />
           <AnimatedBackground />
           <DeferredEffects />
           <ScrollProgress />
@@ -78,6 +78,12 @@ export default function RootLayout({
             <PageTransition>{children}</PageTransition>
           </div>
         </ScrollLayout>
+        {/* Statistiques agrégées, sans cookie ni suivi individuel. */}
+        <Script
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={JSON.stringify({ token: siteConfig.cloudflareAnalyticsToken })}
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
