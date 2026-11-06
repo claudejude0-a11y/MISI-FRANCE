@@ -260,19 +260,27 @@ export const guides: Guide[] = [
     title: "Combien ça coûte, et comment se passe une intervention ?",
     titleTag: "Prix et déroulement d'une intervention de sécurité incendie | MISI",
     description:
-      "Tarif sur devis selon le nombre et le type d'équipements. Rendez-vous, vérifications, remplacements, signature du registre et rapport envoyé par e-mail.",
+      "Tarif sur devis selon le nombre et le type d'équipements. Étude sur place pour un nouveau client, rendez-vous et rapport envoyé sous 24 h pour un client suivi.",
     answer:
-      "Le prix se fait sur devis, selon le nombre et le type d'équipements. L'intervention se fait sur rendez-vous, et le rapport vous est envoyé par e-mail.",
+      "Le prix se fait sur devis, selon le nombre et le type d'équipements. Chaque intervention se fait sur rendez-vous. Pour un nouveau client, nous commençons par une étude sur place.",
     sections: [
       {
-        h2: "Comment se passe l'intervention",
+        h2: "Vous êtes un nouveau client",
+        bullets: [
+          "Vous nous indiquez ce que vous avez sur place et nous prenons rendez-vous. Le devis est envoyé par e-mail et, en général, signé avant notre venue.",
+          "Sur place, nous faisons toujours une étude, même si vous nous avez déjà donné un nombre d'appareils par téléphone : il n'est pas toujours simple d'identifier soi-même le type de matériel.",
+          "Nous contrôlons l'ensemble du matériel, sa quantité exacte et son emplacement, ainsi que les locaux, les locaux à risque et la circulation.",
+          "Nous enregistrons ces informations dans notre propre registre, pour préparer les passages suivants.",
+          "Si le devis n'a pas encore été établi, nous vous l'envoyons par e-mail après cette étude.",
+        ],
+      },
+      {
+        h2: "Vous êtes déjà client",
         bullets: [
           "Nous prenons rendez-vous avec vous.",
-          "Le technicien arrive préparé : il connaît le nombre, le type et l'emplacement du matériel à traiter.",
-          "Il réalise les vérifications et remplace ce qui doit l'être.",
-          "Il vérifie que tout fonctionne.",
-          "Il signe le registre de sécurité.",
-          "Nous vous envoyons nos rapports par e-mail, à imprimer ou à intégrer au registre.",
+          "Le technicien arrive préparé : il connaît déjà le nombre, le type et l'emplacement de votre matériel.",
+          "Il réalise l'intervention, puis remplit le registre de sécurité.",
+          "Vous recevez le rapport d'intervention par e-mail sous 24 heures.",
         ],
       },
       {
