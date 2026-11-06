@@ -260,7 +260,7 @@ export const guides: Guide[] = [
     title: "Combien ça coûte, et comment se passe une intervention ?",
     titleTag: "Prix et déroulement d'une intervention de sécurité incendie | MISI",
     description:
-      "Tarif sur devis selon le nombre et le type d'équipements. Étude sur place pour un nouveau client, rendez-vous et rapport envoyé sous 24 h pour un client suivi.",
+      "Tarif sur devis selon le nombre et le type d'équipements. Étude sur place pour un nouveau client, rendez-vous et rapport envoyé sous 24 à 48 h pour un client suivi.",
     answer:
       "Le prix se fait sur devis, selon le nombre et le type d'équipements. Chaque intervention se fait sur rendez-vous. Pour un nouveau client, nous commençons par une étude sur place.",
     sections: [
@@ -280,7 +280,7 @@ export const guides: Guide[] = [
           "Nous prenons rendez-vous avec vous.",
           "Le technicien arrive préparé : il connaît déjà le nombre, le type et l'emplacement de votre matériel.",
           "Il réalise l'intervention, puis remplit le registre de sécurité.",
-          "Vous recevez le rapport d'intervention par e-mail sous 24 heures.",
+          "Vous recevez le rapport d'intervention par e-mail sous 24 heures, 48 heures au maximum.",
         ],
       },
       {
