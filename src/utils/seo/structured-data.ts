@@ -67,6 +67,7 @@ export function getLocalBusinessStructuredData(areaServed?: string) {
     ...(business.phone ? { telephone: business.phone } : {}),
     address: {
       "@type": "PostalAddress",
+      streetAddress: business.address.street,
       addressLocality: business.address.locality,
       postalCode: business.address.postalCode,
       addressRegion: business.address.region,
@@ -76,6 +77,41 @@ export function getLocalBusinessStructuredData(areaServed?: string) {
     areaServed: [...new Set(areas)].map((a) => ({
       "@type": "AdministrativeArea",
       name: a,
+    })),
+  };
+}
+
+/** Service schema — décrit une prestation et l'entreprise qui la fournit. */
+export function getServiceStructuredData(name: string, description: string, path: string) {
+  const { business, url } = siteConfig;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    url: `${url}${path}`,
+    serviceType: name,
+    provider: {
+      "@type": "LocalBusiness",
+      "@id": `${url}/#localbusiness`,
+      name: siteConfig.name,
+      telephone: business.phone,
+      url,
+    },
+    areaServed: business.areaServed.map((a) => ({ "@type": "AdministrativeArea", name: a })),
+  };
+}
+
+/** BreadcrumbList schema — le chemin de la page, de l'accueil à la page courante. */
+export function getBreadcrumbStructuredData(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [{ name: "Accueil", path: "" }, ...items].map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${siteConfig.url}${item.path}`,
     })),
   };
 }

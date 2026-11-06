@@ -15,9 +15,9 @@ export const metadata: Metadata = buildMetadata({
   url: "/contact",
 });
 
-const details = [
-  { Icon: IconPhone, title: "Téléphone", text: "07 62 57 56 78 — du lundi au vendredi, 8h–18h" },
-  { Icon: IconMail, title: "E-mail", text: "direction@misifrance.com" },
+const details: { Icon: typeof IconPhone; title: string; text: string; href?: string }[] = [
+  { Icon: IconPhone, title: "Téléphone", text: "07 62 57 56 78 — du lundi au vendredi, 8h–18h", href: "tel:+33762575678" },
+  { Icon: IconMail, title: "E-mail", text: "direction@misifrance.com", href: "mailto:direction@misifrance.com" },
   { Icon: IconMapPin, title: "Zone d'intervention", text: "Précisez votre localisation dans le formulaire — nous vous indiquons notre disponibilité" },
   { Icon: IconClock, title: "Délai de réponse", text: "Sous 24h ouvrées pour toute demande" },
 ];
@@ -26,6 +26,7 @@ export default function ContactPage() {
   return (
     <>
       <Header />
+      <main id="contenu">
 
       <div className="relative overflow-hidden border-b border-white/8 pt-[140px] pb-20">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_0%_50%,rgba(230,48,48,0.1)_0%,transparent_60%)]" />
@@ -52,7 +53,11 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-tech mb-1 text-[10px] font-medium tracking-[0.15em] text-white/60 uppercase">{d.title}</p>
-                    <p className="text-sm text-white/60">{d.text}</p>
+                    {d.href ? (
+                      <a href={d.href} className="text-sm text-white/60 transition hover:text-white">{d.text}</a>
+                    ) : (
+                      <p className="text-sm text-white/60">{d.text}</p>
+                    )}
                   </div>
                 </RevealItem>
               ))}
@@ -69,6 +74,7 @@ export default function ContactPage() {
           <ContactForm />
         </div>
       </section>
+      </main>
 
       <FooterMini />
     </>

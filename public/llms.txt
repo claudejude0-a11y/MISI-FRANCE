@@ -1,0 +1,30 @@
+# MISI — Maintenance et Installation Sécurité Incendie
+
+> MISI est une entreprise française de sécurité incendie : maintenance, installation et vérification des équipements de protection contre l'incendie. Intervention partout en France, en priorité dans l'Yonne (89), en Île-de-France (75, 77, 78, 91, 92, 93, 94, 95), dans l'Aube (10) et le Loiret (45).
+
+Téléphone : 07 62 57 56 78
+E-mail : direction@misifrance.com
+Établissement : 1 bis Chemin de la Renauderie, 89150 Dollot
+
+## Prestations
+
+- [Extincteurs](https://www.misifrance.fr/prestations/extincteurs) : vérification et maintenance
+- [RIA](https://www.misifrance.fr/prestations/ria) : installation et entretien des robinets d'incendie armés
+- [BAES](https://www.misifrance.fr/prestations/baes) : vérification et remplacement des blocs d'éclairage de sécurité
+- [Désenfumage](https://www.misifrance.fr/prestations/desenfumage) : vérification et entretien
+- [Portes coupe-feu](https://www.misifrance.fr/prestations/portes-coupe-feu) : installation et maintenance
+- [Poteaux incendie](https://www.misifrance.fr/prestations/hydrants) : contrôle et essai hydraulique
+- [Bâches incendie](https://www.misifrance.fr/prestations/baches) : inspection et contrôle
+- [CATI](https://www.misifrance.fr/prestations/centrales-qti) : centrales d'alarme technique incendie
+- [Alarme Type 4 et PPMS](https://www.misifrance.fr/prestations/ppms)
+- [Réflex O Feu](https://www.misifrance.fr/prestations/reflex-o-feu) : extinction pour armoires électriques
+- [Plans d'évacuation et signalétique](https://www.misifrance.fr/prestations/plans-signaletique)
+
+## Zones
+
+- [Yonne (89)](https://www.misifrance.fr/zones/yonne-89)
+- [Île-de-France](https://www.misifrance.fr/zones/ile-de-france)
+
+## Contact
+
+- [Formulaire de contact](https://www.misifrance.fr/contact)

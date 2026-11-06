@@ -9,6 +9,7 @@ import { PrestationHeroPhoto } from "@/components/prestation/PrestationHeroPhoto
 import { FooterMini } from "@/components/site/FooterMini";
 import { Header } from "@/components/site/Header";
 import { generateMetadata as buildMetadata } from "@/utils/seo/generate-page-metadata";
+import { getBreadcrumbStructuredData, getServiceStructuredData } from "@/utils/seo/structured-data";
 
 export const metadata = buildMetadata({
   title: "Plans d'évacuation & signalétique — Yonne & Île-de-France | MISI",
@@ -130,7 +131,20 @@ function RegBlock({ children }: { children: React.ReactNode }) {
 export default function PlansSignaletiquePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getServiceStructuredData("Plans d'évacuation et signalétique de sécurité", "Plans d'évacuation, plans d'intervention et signalétique de sécurité incendie.", "/prestations/plans-signaletique")),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getBreadcrumbStructuredData([{ name: "Plans & signalétique", path: "/prestations/plans-signaletique" }])),
+        }}
+      />
       <Header />
+      <main id="contenu">
 
       <div className="relative overflow-hidden border-b border-white/8 pt-[140px] pb-20">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_0%_50%,rgba(230,48,48,0.1)_0%,transparent_60%)]" />
@@ -289,6 +303,7 @@ export default function PlansSignaletiquePage() {
           </aside>
         </div>
       </div>
+      </main>
 
       <FooterMini />
     </>

@@ -14,6 +14,7 @@ export default function ConfidentialitePage() {
   return (
     <>
       <Header />
+      <main id="contenu">
       <div className="relative overflow-hidden border-b border-white/8 pt-[140px] pb-16">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_0%_50%,rgba(230,48,48,0.1)_0%,transparent_60%)]" />
         <div className="relative mx-auto max-w-[880px] px-8">
@@ -68,6 +69,7 @@ export default function ConfidentialitePage() {
           </div>
         </div>
       </section>
+      </main>
 
       <FooterMini />
     </>

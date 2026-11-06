@@ -4,7 +4,7 @@ import { priorityDepartments, zones } from "@/lib/zones-data";
 
 export function FooterMini() {
   return (
-    <div className="border-t border-white/8 bg-surface py-6">
+    <footer className="border-t border-white/8 bg-surface py-6">
       {/* Liens vers les pages de villes : sans eux, seules les pages de zones se
           citaient entre elles et Google ne les jugeait pas prioritaires. */}
       <nav aria-label="Zones d'intervention" className="mx-auto mb-4 max-w-[1240px] px-8 text-sm text-white/60">
@@ -22,10 +22,13 @@ export function FooterMini() {
       </nav>
       <div className="mx-auto flex max-w-[1240px] flex-col items-center justify-between gap-2 px-8 text-sm text-white/60 md:flex-row">
         <span>© 2026 MISI — Maintenance Installation Sécurité Incendie</span>
+        <a href="tel:+33762575678" className="font-semibold text-white transition hover:text-red-light">
+          07 62 57 56 78
+        </a>
         <Link href="/" className="text-red transition hover:text-white">
           ← Retour à l&apos;accueil
         </Link>
       </div>
-    </div>
+    </footer>
   );
 }

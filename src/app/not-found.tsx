@@ -11,6 +11,7 @@ export default function NotFound() {
   return (
     <>
       <Header />
+      <main id="contenu">
       <div className="relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden px-8 pt-[140px] pb-20 text-center">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_40%,rgba(230,48,48,0.1)_0%,transparent_60%)]" />
         <div className="relative">
@@ -32,6 +33,7 @@ export default function NotFound() {
           </div>
         </div>
       </div>
+      </main>
       <FooterMini />
     </>
   );

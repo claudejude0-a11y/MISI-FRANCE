@@ -62,6 +62,12 @@ export default function RootLayout({
           }}
         />
         <ScrollLayout>
+          <a
+            href="#contenu"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[1100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-charcoal"
+          >
+            Aller au contenu
+          </a>
           <AdaptiveGrid />
           <ReducedMotion />
           <LazyCookie />

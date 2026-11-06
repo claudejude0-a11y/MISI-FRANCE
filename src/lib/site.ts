@@ -39,12 +39,13 @@ export const siteConfig = {
    * rendre publics (les valeurs ci-dessous sont pré-remplies à titre indicatif).
    */
   business: {
-    legalName: "MISI — Maintenance Installation Sécurité Incendie",
+    legalName: "Maintenance et Installation Sécurité Incendie",
     email: "direction@misifrance.com",
     /** Numéro public au format E.164 (confirmé : identique aux mentions légales, footer et page contact). */
     phone: "+33762575678",
     address: {
-      locality: "Courtoin",
+      street: "1 bis Chemin de la Renauderie",
+      locality: "Dollot",
       postalCode: "89150",
       region: "Bourgogne-Franche-Comté",
       country: "FR",

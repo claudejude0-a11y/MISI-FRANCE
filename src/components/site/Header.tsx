@@ -5,6 +5,10 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { Spring } from "@/components/animation/springs/spring";
+import { IconPhone } from "@/components/icons";
+import { siteConfig } from "@/lib/site";
+
+const PHONE_LABEL = "07 62 57 56 78";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -48,6 +52,15 @@ export function Header() {
               </Link>
             </li>
           </ul>
+          <div className="flex items-center gap-2 lg:gap-4">
+          <a
+            href={`tel:${siteConfig.business.phone}`}
+            aria-label={`Appeler MISI au ${PHONE_LABEL}`}
+            className="flex h-11 min-w-11 items-center justify-center gap-2 rounded-full border border-white/15 px-3 text-sm font-semibold text-white transition hover:border-white/40"
+          >
+            <IconPhone width={18} height={18} className="text-red-light" />
+            <span className="hidden lg:inline">{PHONE_LABEL}</span>
+          </a>
           <Link
             href="/#devis"
             className="hidden rounded-full bg-red-strong px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-red-dark md:inline-flex"
@@ -66,6 +79,7 @@ export function Header() {
             <span className="h-0.5 w-6 bg-white" />
             <span className="h-0.5 w-6 bg-white" />
           </button>
+          </div>
         </nav>
       </header>
 

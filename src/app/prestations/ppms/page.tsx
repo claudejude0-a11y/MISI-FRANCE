@@ -10,6 +10,7 @@ import { PrestationHeroPhoto } from "@/components/prestation/PrestationHeroPhoto
 import { FooterMini } from "@/components/site/FooterMini";
 import { Header } from "@/components/site/Header";
 import { generateMetadata as buildMetadata } from "@/utils/seo/generate-page-metadata";
+import { getBreadcrumbStructuredData, getServiceStructuredData } from "@/utils/seo/structured-data";
 
 export const metadata: Metadata = buildMetadata({
   title: "Alarme Type 4 & PPMS — Yonne & Île-de-France | MISI",
@@ -96,7 +97,20 @@ function SimpleList({ items }: { items: string[] }) {
 export default function PpmsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getServiceStructuredData("Alarme incendie Type 4 et alarme PPMS", "Alarmes incendie Type 4 et alarmes PPMS pour les établissements.", "/prestations/ppms")),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getBreadcrumbStructuredData([{ name: "Alarme Type 4 & PPMS", path: "/prestations/ppms" }])),
+        }}
+      />
       <Header />
+      <main id="contenu">
 
       <div className="relative overflow-hidden border-b border-white/8 pt-[140px] pb-20">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_0%_50%,rgba(230,48,48,0.1)_0%,transparent_60%)]" />
@@ -269,6 +283,7 @@ export default function PpmsPage() {
           </aside>
         </div>
       </div>
+      </main>
 
       <FooterMini />
     </>

@@ -15,6 +15,7 @@ export function PrestationView({ p }: { p: Prestation }) {
   return (
     <>
       <Header />
+      <main id="contenu">
 
       <div className="relative overflow-hidden border-b border-white/8 pt-[140px] pb-20">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_0%_50%,rgba(230,48,48,0.1)_0%,transparent_60%)]" />
@@ -127,6 +128,7 @@ export function PrestationView({ p }: { p: Prestation }) {
           </aside>
         </div>
       </div>
+      </main>
 
       <FooterMini />
     </>

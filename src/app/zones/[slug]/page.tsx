@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ZoneView } from "@/components/zone/ZoneView";
 import { getZone, zones } from "@/lib/zones-data";
 import { generateMetadata as buildMetadata } from "@/utils/seo/generate-page-metadata";
+import { getBreadcrumbStructuredData } from "@/utils/seo/structured-data";
 
 export function generateStaticParams() {
   return zones.map((z) => ({ slug: z.slug }));
@@ -32,5 +33,15 @@ export default async function ZonePage({
   const { slug } = await params;
   const z = getZone(slug);
   if (!z) notFound();
-  return <ZoneView z={z} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getBreadcrumbStructuredData([{ name: z.name, path: `/zones/${z.slug}` }])),
+        }}
+      />
+      <ZoneView z={z} />
+    </>
+  );
 }

@@ -10,6 +10,7 @@ import { PrestationHeroPhoto } from "@/components/prestation/PrestationHeroPhoto
 import { FooterMini } from "@/components/site/FooterMini";
 import { Header } from "@/components/site/Header";
 import { generateMetadata as buildMetadata } from "@/utils/seo/generate-page-metadata";
+import { getBreadcrumbStructuredData, getServiceStructuredData } from "@/utils/seo/structured-data";
 
 export const metadata: Metadata = buildMetadata({
   title: "CATI — Centrale d'alarme incendie, Yonne & Île-de-France | MISI",
@@ -39,7 +40,20 @@ const prestationsCati = [
 export default function CatiPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getServiceStructuredData("CATI — Centrale d'alarme technique incendie", "Installation et maintenance de centrales d'alarme technique incendie (CATI).", "/prestations/centrales-qti")),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getBreadcrumbStructuredData([{ name: "CATI", path: "/prestations/centrales-qti" }])),
+        }}
+      />
       <Header />
+      <main id="contenu">
 
       <div className="relative overflow-hidden border-b border-white/8 pt-[140px] pb-20">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_0%_50%,rgba(230,48,48,0.1)_0%,transparent_60%)]" />
@@ -168,6 +182,7 @@ export default function CatiPage() {
           </aside>
         </div>
       </div>
+      </main>
 
       <FooterMini />
     </>

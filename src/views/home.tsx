@@ -41,8 +41,9 @@ const process = [
 
 export const HomeView = () => {
   return (
-    <main className="min-h-lvh">
+    <div className="min-h-lvh">
       <Header />
+      <main id="contenu">
 
       <HeroSection />
 
@@ -237,8 +238,9 @@ export const HomeView = () => {
           <Faq />
         </div>
       </section>
+      </main>
 
       <Footer />
-    </main>
+    </div>
   );
 };
