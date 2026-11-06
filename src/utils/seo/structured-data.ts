@@ -103,6 +103,14 @@ export function getServiceStructuredData(name: string, description: string, path
       name: siteConfig.name,
       telephone: business.phone,
       url,
+      image: `${url}${siteConfig.ogImage}`,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: business.address.street,
+        addressLocality: business.address.locality,
+        postalCode: business.address.postalCode,
+        addressCountry: business.address.country,
+      },
     },
     areaServed: business.areaServed.map((a) => ({ "@type": "AdministrativeArea", name: a })),
   };

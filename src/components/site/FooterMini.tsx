@@ -2,11 +2,35 @@ import Link from "next/link";
 
 import { namedDepartments, zones } from "@/lib/zones-data";
 
+const serviceLinks = [
+  { href: "/prestations/extincteurs", label: "Extincteurs" },
+  { href: "/prestations/ria", label: "RIA" },
+  { href: "/prestations/baes", label: "BAES" },
+  { href: "/prestations/desenfumage", label: "Désenfumage" },
+  { href: "/prestations/portes-coupe-feu", label: "Portes coupe-feu" },
+  { href: "/prestations/hydrants", label: "Poteaux incendie" },
+  { href: "/prestations/baches", label: "Bâches incendie" },
+  { href: "/prestations/centrales-qti", label: "CATI" },
+  { href: "/prestations/ppms", label: "Alarme Type 4 & PPMS" },
+  { href: "/prestations/reflex-o-feu", label: "Réflex O Feu" },
+  { href: "/prestations/plans-signaletique", label: "Plans & signalétique" },
+];
+
 export function FooterMini() {
   return (
     <footer className="border-t border-white/8 bg-surface py-6">
       {/* Liens vers les pages de villes : sans eux, seules les pages de zones se
           citaient entre elles et Google les explorait peu. */}
+      <nav aria-label="Prestations" className="mx-auto mb-3 max-w-[1240px] px-8 text-sm text-white/60">
+        <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 md:justify-start">
+          <li>Prestations :</li>
+          {serviceLinks.map((s) => (
+            <li key={s.href}>
+              <Link href={s.href} className="transition hover:text-white">{s.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
       <nav aria-label="Zones d'intervention" className="mx-auto mb-4 max-w-[1240px] px-8 text-sm text-white/60">
         <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 md:justify-start">
           <li>Zones d&apos;intervention :</li>

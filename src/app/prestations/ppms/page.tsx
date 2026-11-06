@@ -36,14 +36,14 @@ const type4Prestations = [
   "Étude & dimensionnement — nombre et positionnement des déclencheurs et sirènes",
   "Installation complète — déclencheurs, diffuseurs sonores, tableau de signalisation",
   "Mise en service & essais — vérification de la couverture sonore sur l'ensemble du site",
-  "Vérification annuelle obligatoire — rapport remis pour le registre de sécurité",
+  "Vérification annuelle — rapport remis pour le registre de sécurité",
   "Maintenance corrective — remplacement de composants défaillants",
 ];
 
 const ppmsComposition = [
-  { strong: "Déclencheur manuel noir", text: "boîtier de couleur noire (norme NF S 61-942), fixé à 1,30 m du sol, distinct visuellement du rouge incendie" },
+  { strong: "Déclencheur manuel noir", text: "boîtier de couleur noire, fixé à 1,30 m du sol, distinct visuellement du rouge incendie" },
   { strong: "Signal sonore spécifique", text: "son strident de classe B, puissant et différencié, audible dans les espaces bruyants (gymnases, cafétérias, cours)" },
-  { strong: "Flash lumineux bleu", text: "alerte visuelle obligatoire pour les personnes malentendantes, synchronisée avec le signal sonore" },
+  { strong: "Flash lumineux bleu", text: "alerte visuelle pour les personnes malentendantes, synchronisée avec le signal sonore" },
   { strong: "Messages vocaux personnalisés", text: "annonces préenregistrées diffusant les consignes adaptées à chaque type de menace" },
   { strong: "Systèmes filaires ou radio", text: "solutions câblées ou systèmes sans fil (technologie LoRa) pour une installation sans travaux" },
   { strong: "Déclenchement mobile", text: "activation depuis une application ou une télécommande portative pour le personnel" },
@@ -62,7 +62,7 @@ const ppmsPrestations = [
   "Programmation des messages vocaux personnalisés par type de menace",
   "Solution radio sans fil sans travaux ou intégration au câblage existant",
   "Mise en service & essais — vérification de la couverture sonore et visuelle sur l'ensemble du site",
-  "Vérification annuelle NF S 61-942 — rapport remis pour le registre de sécurité",
+  "Vérification annuelle — rapport remis pour le registre de sécurité",
   "Maintenance corrective & accompagnement aux exercices réglementaires",
 ];
 
@@ -172,13 +172,13 @@ export default function PpmsPage() {
             <ListBlock items={type4Composition} />
 
             <h3 className="mt-9 mb-3.5 text-lg font-semibold text-white">Établissements concernés</h3>
-            <p className="mb-4 leading-7 text-white/60">L&apos;alarme Type 4 est obligatoire dans les établissements suivants :</p>
+            <p className="mb-4 leading-7 text-white/60">L&apos;alarme Type 4 concerne notamment les établissements suivants :</p>
             <SimpleList items={type4Concerned} />
 
             <div className="my-8 rounded-r-xl border-l-[3px] border-red bg-red/6 px-6 py-5">
               <h3 className="font-tech mb-2 text-[11px] font-medium tracking-[0.15em] text-red-light uppercase">Obligations réglementaires</h3>
               <p className="text-sm leading-6 text-white/70">
-                La norme <strong className="text-white">NF S 32-001</strong> fixe les exigences techniques : niveau sonore minimum 10 dB au-dessus du bruit ambiant, alimentation de secours assurant au moins <strong className="text-white">12 heures de veille et 5 minutes en alarme</strong>. Des <strong className="text-white">vérifications trimestrielles</strong> doivent être effectuées par le personnel formé, et un <strong className="text-white">contrôle annuel</strong> par un technicien qualifié est obligatoire, avec rapport versé au registre de sécurité. La responsabilité pénale de l&apos;exploitant est engagée en cas de défaut. En ERP, des exercices d&apos;évacuation sont également obligatoires au moins tous les 6 mois (article MS 47 de l&apos;arrêté du 25 juin 1980).
+                Le type d&apos;alarme et les contrôles à prévoir dépendent de votre établissement et de son classement. Nous les définissons avec vous lors de l&apos;étude, et chaque vérification donne lieu à un rapport pour votre registre de sécurité.
               </p>
             </div>
 
@@ -210,7 +210,7 @@ export default function PpmsPage() {
             <ListBlock items={ppmsComposition} />
 
             <h3 className="mt-9 mb-3.5 text-lg font-semibold text-white">Établissements concernés</h3>
-            <p className="mb-4 leading-7 text-white/60">L&apos;alarme PPMS est obligatoire ou fortement recommandée dans tous les établissements accueillant du public :</p>
+            <p className="mb-4 leading-7 text-white/60">L&apos;alarme PPMS concerne notamment les établissements suivants :</p>
             <ListBlock items={ppmsConcerned} />
 
             <h3 className="mt-9 mb-3.5 text-lg font-semibold text-white">Pourquoi deux alarmes différentes sont indispensables</h3>
@@ -224,7 +224,7 @@ export default function PpmsPage() {
             <div className="my-8 rounded-r-xl border-l-[3px] border-red bg-red/6 px-6 py-5">
               <h3 className="font-tech mb-2 text-[11px] font-medium tracking-[0.15em] text-red-light uppercase">Obligations réglementaires</h3>
               <p className="text-sm leading-6 text-white/70">
-                La norme <strong className="text-white">NF S 61-942</strong> impose que le déclencheur PPMS soit de couleur noire, le flash lumineux bleu, et le signal sonore clairement différencié de l&apos;alarme incendie. La circulaire <strong className="text-white">n° 2023-041 du 9 mars 2023</strong> (Éducation nationale) unifie le PPMS risques majeurs et attentat-intrusion, avec mise en conformité requise avant septembre 2028. <strong className="text-white">Deux exercices annuels minimum</strong> sont obligatoires dans les établissements scolaires.
+                La <strong className="text-white">circulaire du 8 juin 2023</strong> (Éducation nationale) unifie les plans « risques majeurs » et « attentat-intrusion » dans un seul PPMS pour les écoles et établissements publics du second degré. Elle prévoit <strong className="text-white">au moins deux exercices PPMS par an</strong>, distincts des exercices incendie.
               </p>
             </div>
 
@@ -236,7 +236,7 @@ export default function PpmsPage() {
             <div className="rounded-[20px] border border-white/8 bg-surface p-6">
               <h3 className="mb-4 text-sm font-semibold text-white">Alarme Type 4</h3>
               <ul className="flex flex-col">
-                {["Installation déclencheurs & sirènes", "Mise en service & essais", "Vérification annuelle NF S 32-001", "Maintenance corrective"].map((item) => (
+                {["Installation déclencheurs & sirènes", "Mise en service & essais", "Vérification annuelle", "Maintenance corrective"].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 border-b border-white/8 py-2.5 text-sm text-white/60 last:border-0">
                     <span className="text-xs text-red">→</span>
                     {item}
@@ -247,7 +247,7 @@ export default function PpmsPage() {
             <div className="rounded-[20px] border border-white/8 bg-surface p-6">
               <h3 className="mb-4 text-sm font-semibold text-white">Alarme PPMS</h3>
               <ul className="flex flex-col">
-                {["Déclencheur noir NF S 61-942", "Flash bleu malentendants", "Messages vocaux personnalisés", "Option radio sans fil LoRa", "Vérification annuelle", "Exercices réglementaires"].map((item) => (
+                {["Déclencheur noir", "Flash bleu malentendants", "Messages vocaux personnalisés", "Option radio sans fil LoRa", "Vérification annuelle", "Exercices réglementaires"].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 border-b border-white/8 py-2.5 text-sm text-white/60 last:border-0">
                     <span className="text-xs text-red">→</span>
                     {item}

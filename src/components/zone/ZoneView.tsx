@@ -6,6 +6,7 @@ import { Eyebrow } from "@/components/common/Eyebrow";
 import { IconArrowRight } from "@/components/icons";
 import { FooterMini } from "@/components/site/FooterMini";
 import { Header } from "@/components/site/Header";
+import { generalGuides } from "@/lib/guides-data";
 import { zonePrestationLinks, zones, type Zone } from "@/lib/zones-data";
 import { getLocalBusinessStructuredData } from "@/utils/seo/structured-data";
 
@@ -118,6 +119,18 @@ export function ZoneView({ z }: { z: Zone }) {
                     <span className="text-xs text-red">→</span>
                     <Link href={`/zones/${other.slug}`} className="text-white/60 transition hover:text-white">
                       {other.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-[20px] border border-white/8 bg-surface p-6">
+              <h3 className="mb-4 text-sm font-semibold text-white">Questions fréquentes</h3>
+              <ul className="flex flex-col gap-3 text-sm">
+                {generalGuides.map((g) => (
+                  <li key={g.slug}>
+                    <Link href={`/guides/${g.slug}`} className="text-white/60 transition hover:text-white">
+                      {g.title}
                     </Link>
                   </li>
                 ))}

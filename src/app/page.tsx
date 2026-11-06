@@ -9,7 +9,7 @@ import {
 import { HomeView } from "@/views/home";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Sécurité incendie partout en France : Paris, Île-de-France, Yonne — MISI",
+  title: "Entreprise de sécurité incendie en France : Paris, Île-de-France, Yonne | MISI",
   description:
     "Entreprise de sécurité incendie : maintenance et vérification d'extincteurs, RIA, BAES, désenfumage. Paris, Île-de-France, Yonne et partout en France. Devis gratuit.",
   url: "/",

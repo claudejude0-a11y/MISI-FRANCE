@@ -18,6 +18,8 @@ export type Guide = {
   sources: GuideSource[];
   /** Prestation liée (slug sous `/prestations/`). */
   prestation?: string;
+  /** Autres prestations qui renvoient vers ce guide. */
+  alsoFor?: string[];
 };
 
 const INRS = {
@@ -107,6 +109,7 @@ export const guides: Guide[] = [
   {
     slug: "verification-ria-desenfumage-portes-coupe-feu",
     title: "RIA, désenfumage, portes coupe-feu : quelles vérifications ?",
+    alsoFor: ["ria", "desenfumage", "portes-coupe-feu"],
     titleTag: "RIA, désenfumage, portes coupe-feu : quelles vérifications ? | MISI",
     description:
       "Les fréquences de vérification à connaître pour les RIA, le désenfumage et les portes coupe-feu, selon le type de bâtiment.",
@@ -295,3 +298,8 @@ export const guides: Guide[] = [
 export function getGuide(slug: string) {
   return guides.find((g) => g.slug === slug);
 }
+
+/** Guides utiles quel que soit le service ou la zone. */
+export const generalGuides = guides.filter((g) =>
+  ["obligations-securite-incendie-erp-entreprise-copropriete", "registre-de-securite", "prix-et-deroulement-intervention"].includes(g.slug),
+);

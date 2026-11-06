@@ -59,7 +59,7 @@ export const prestations: Prestation[] = [
     heroImage: "/images/extincteurs.jpg",
     heroAlt: "Extincteurs de sécurité incendie",
     intro:
-      "Vérification annuelle, recharge, révision quinquennale et remplacement de vos extincteurs portatifs et sur roues, selon les normes en vigueur.",
+      "Vérification annuelle, recharge, maintenance approfondie à 5 et 15 ans et remplacement de vos extincteurs portatifs et sur roues, selon les normes en vigueur.",
     h2: "Qu'est-ce qu'un extincteur ?",
     paragraphs: [
       "L'extincteur est le premier moyen de lutte contre l'incendie à la disposition de toute personne présente sur un site. Portatif ou sur roues, il permet d'intervenir immédiatement dès les premières secondes d'un départ de feu, avant que celui-ci ne se propage.",
@@ -72,12 +72,12 @@ export const prestations: Prestation[] = [
     ],
     regleTitle: "Obligations réglementaires",
     regleText:
-      "Les extincteurs doivent être conformes à la norme NF EN 3 (appareils portatifs) ou NF EN 1866 (appareils sur roues). L'arrêté du 25 juin 1980 (article MS 39, ERP) impose au minimum un extincteur à eau de 6 litres pour 200 à 300 m² selon le type d'ERP, avec au moins un appareil par niveau. Des appareils supplémentaires adaptés sont obligatoires pour les risques spécifiques (locaux électriques, cuisines professionnelles avec feux de classe F, etc.). L'article R4227-29 du Code du travail fixe les obligations pour les lieux de travail. La révision quinquennale est régie par la recommandation APSAD R4. Tout extincteur utilisé, même partiellement, doit être rechargé ou remplacé immédiatement.",
+      "Les extincteurs doivent être conformes à la norme NF EN 3 (appareils portatifs) ou NF EN 1866 (appareils sur roues). L'arrêté du 25 juin 1980 (article MS 39, ERP) impose au minimum un extincteur à eau de 6 litres pour 200 à 300 m² selon le type d'ERP, avec au moins un appareil par niveau. Des appareils supplémentaires adaptés sont obligatoires pour les risques spécifiques (locaux électriques, cuisines professionnelles avec feux de classe F, etc.). L'article R4227-29 du Code du travail fixe les obligations pour les lieux de travail. La maintenance approfondie, à 5 et 15 ans, suit la norme NF S 61-919 et la règle APSAD R4. Tout extincteur utilisé, même partiellement, doit être rechargé ou remplacé immédiatement.",
     h3: "Nos prestations",
     list: [
       { text: "Vérification annuelle — contrôle visuel, pression, accessibilité, signalisation, date de péremption" },
       { text: "Recharge — après utilisation ou en fin de vie de l'agent extincteur" },
-      { text: "Révision quinquennale — démontage, remplacement des joints et des pièces d'usure" },
+      { text: "Maintenance approfondie à 5 et 15 ans — démontage, remplacement des joints et des pièces d'usure" },
       { text: "Remplacement — fourniture et installation de nouveaux appareils conformes" },
       { text: "Implantation & signalétique — conseil sur le positionnement optimal et pose des panneaux" },
       { text: "Rapport d'intervention — remis à chaque passage pour mise à jour du registre de sécurité" },
@@ -86,7 +86,7 @@ export const prestations: Prestation[] = [
     sidebarList: [
       "Vérification annuelle",
       "Recharge après utilisation",
-      "Révision quinquennale",
+      "Maintenance approfondie à 5 et 15 ans",
       "Remplacement d'appareils",
       "Conseil en implantation",
       "Mise à jour registre",
@@ -175,11 +175,11 @@ export const prestations: Prestation[] = [
     ],
     regleTitle: "Obligations réglementaires",
     regleText:
-      "La norme NF C 71-800 impose une vérification mensuelle par test de basculement (réalisée par l'exploitant ou un agent désigné) et une vérification annuelle complète par un technicien qualifié (mesure du flux, autonomie réelle, état des batteries). Le remplacement intervient dès que la vérification révèle une autonomie insuffisante — en pratique après 4 à 6 ans pour les batteries NiMH ou Li-Ion, mais la durée de vie des blocs LED peut être significativement supérieure. Le SATI (Système Automatique de Test Intégré) permet de tester automatiquement chaque bloc et de signaler les défauts par voyant ou bus de communication, sans intervention manuelle.",
+      "Les textes prévoient un essai de basculement chaque mois (réalisé par l'exploitant ou une personne désignée), un contrôle d'autonomie tous les six mois et une vérification annuelle par un technicien qualifié. Le remplacement intervient dès que la vérification révèle une autonomie insuffisante — en pratique après 4 à 6 ans pour les batteries NiMH ou Li-Ion, mais la durée de vie des blocs LED peut être significativement supérieure. Le SATI (Système Automatique de Test Intégré) permet de tester automatiquement chaque bloc et de signaler les défauts par voyant ou bus de communication, sans intervention manuelle.",
     h3: "Nos prestations",
     list: [
       { text: "Vérification mensuelle — test de basculement" },
-      { text: "Vérification annuelle NF C 71-800" },
+      { text: "Vérifications semestrielle et annuelle" },
       { text: "Mesure d'autonomie réelle" },
       { text: "Remplacement de batteries" },
       { text: "Remplacement d'appareils (LED)" },

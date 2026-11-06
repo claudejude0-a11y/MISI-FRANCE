@@ -9,11 +9,11 @@ import { IconArrowRight } from "@/components/icons";
 import { PrestationHeroPhoto } from "@/components/prestation/PrestationHeroPhoto";
 import { FooterMini } from "@/components/site/FooterMini";
 import { Header } from "@/components/site/Header";
-import { guides } from "@/lib/guides-data";
+import { generalGuides, guides } from "@/lib/guides-data";
 import type { Prestation } from "@/lib/prestations-data";
 
 export function PrestationView({ p }: { p: Prestation }) {
-  const guide = guides.find((g) => g.prestation === p.slug);
+  const guide = guides.find((g) => g.prestation === p.slug || g.alsoFor?.includes(p.slug));
   return (
     <>
       <Header />
@@ -130,6 +130,18 @@ export function PrestationView({ p }: { p: Prestation }) {
                     <span className="text-xs text-red">→</span>
                     <Link href={`/prestations/${link.slug}`} className="text-white/60 transition hover:text-white">
                       {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-[20px] border border-white/8 bg-surface p-6">
+              <h3 className="mb-4 text-sm font-semibold text-white">Questions fréquentes</h3>
+              <ul className="flex flex-col gap-3 text-sm">
+                {generalGuides.map((g) => (
+                  <li key={g.slug}>
+                    <Link href={`/guides/${g.slug}`} className="text-white/60 transition hover:text-white">
+                      {g.title}
                     </Link>
                   </li>
                 ))}

@@ -86,7 +86,7 @@ export const zones: Zone[] = [
     slug: "yonne-89",
     name: "Yonne (89)",
     kind: "department",
-    titleTag: "Sécurité incendie dans l'Yonne (89) — MISI",
+    titleTag: "Entreprise de sécurité incendie dans l'Yonne (89) | MISI",
     metaDescription:
       "MISI, votre entreprise de sécurité incendie dans l'Yonne (89) : maintenance et installation d'extincteurs, RIA, BAES, désenfumage, alarme incendie. Devis gratuit.",
     label: "Zone d'intervention",
