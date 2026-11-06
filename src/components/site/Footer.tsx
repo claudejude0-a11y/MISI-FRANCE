@@ -54,7 +54,10 @@ export function Footer() {
               <li><a href="tel:+33762575678" className="font-tech transition hover:text-white">07 62 57 56 78</a></li>
               <li><a href="mailto:direction@misifrance.com" className="transition hover:text-white">direction@misifrance.com</a></li>
               <li><Link href="/contact" className="transition hover:text-white">Formulaire de contact</Link></li>
+              <li><Link href="/a-propos" className="transition hover:text-white">À propos</Link></li>
               <li><Link href="/#devis" className="transition hover:text-white">Demander un devis</Link></li>
+              <li>1 bis Chemin de la Renauderie, 89150 Dollot</li>
+              <li>Lundi au vendredi, 8h30–17h30</li>
             </ul>
           </div>
         </div>

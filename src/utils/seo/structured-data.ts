@@ -73,6 +73,12 @@ export function getLocalBusinessStructuredData(areaServed?: string) {
       addressRegion: business.address.region,
       addressCountry: business.address.country,
     },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:30",
+      closes: "17:30",
+    },
     // De-duplicated list of served administrative areas.
     areaServed: [...new Set(areas)].map((a) => ({
       "@type": "AdministrativeArea",

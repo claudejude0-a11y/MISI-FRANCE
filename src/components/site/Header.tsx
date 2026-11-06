@@ -47,6 +47,11 @@ export function Header() {
               </Link>
             </li>
             <li>
+              <Link href="/a-propos" className="px-4 py-2 text-sm text-white/70 transition hover:text-white">
+                À propos
+              </Link>
+            </li>
+            <li>
               <Link href="/contact" className="px-4 py-2 text-sm text-white/70 transition hover:text-white">
                 Contact
               </Link>
@@ -94,6 +99,9 @@ export function Header() {
           </Link>
           <Link href="/#why" onClick={() => setOpen(false)} className="rounded-lg px-4 py-3 text-white/80">
             Pourquoi MISI
+          </Link>
+          <Link href="/a-propos" onClick={() => setOpen(false)} className="rounded-lg px-4 py-3 text-white/80">
+            À propos
           </Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="rounded-lg px-4 py-3 text-white/80">
             Contact

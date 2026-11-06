@@ -19,6 +19,7 @@ export function FooterMini() {
           ))}
         </ul>
         <p className="mt-3 text-center md:text-left">Intervention partout en France, notamment : {namedDepartments.join(", ")}.</p>
+        <p className="mt-1 text-center md:text-left">1 bis Chemin de la Renauderie, 89150 Dollot — du lundi au vendredi, 8h30–17h30</p>
       </nav>
       <div className="mx-auto flex max-w-[1240px] flex-col items-center justify-between gap-2 px-8 text-sm text-white/60 md:flex-row">
         <span>© 2026 MISI — Maintenance Installation Sécurité Incendie</span>

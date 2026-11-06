@@ -16,9 +16,11 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const details: { Icon: typeof IconPhone; title: string; text: string; href?: string }[] = [
-  { Icon: IconPhone, title: "Téléphone", text: "07 62 57 56 78 — du lundi au vendredi, 8h–18h", href: "tel:+33762575678" },
+  { Icon: IconPhone, title: "Téléphone", text: "07 62 57 56 78", href: "tel:+33762575678" },
+  { Icon: IconClock, title: "Horaires", text: "Du lundi au vendredi, de 8h30 à 17h30" },
+  { Icon: IconMapPin, title: "Adresse", text: "1 bis Chemin de la Renauderie, 89150 Dollot" },
   { Icon: IconMail, title: "E-mail", text: "direction@misifrance.com", href: "mailto:direction@misifrance.com" },
-  { Icon: IconMapPin, title: "Zone d'intervention", text: "Précisez votre localisation dans le formulaire — nous vous indiquons notre disponibilité" },
+  { Icon: IconMapPin, title: "Zone d'intervention", text: "Partout en France — précisez votre localisation dans le formulaire" },
   { Icon: IconClock, title: "Délai de réponse", text: "Sous 24h ouvrées pour toute demande" },
 ];
 
