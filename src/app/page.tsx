@@ -9,9 +9,9 @@ import {
 import { HomeView } from "@/views/home";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Sécurité incendie dans l'Yonne (89) & Île-de-France — MISI",
+  title: "Sécurité incendie partout en France : Paris, Île-de-France, Yonne — MISI",
   description:
-    "Entreprise de sécurité incendie : maintenance et vérification d'extincteurs, RIA, BAES, désenfumage. Yonne, Île-de-France et partout en France. Devis gratuit.",
+    "Entreprise de sécurité incendie : maintenance et vérification d'extincteurs, RIA, BAES, désenfumage. Paris, Île-de-France, Yonne et partout en France. Devis gratuit.",
   url: "/",
 });
 

@@ -65,7 +65,7 @@ export function generateMetadata({
           width: 1200,
           height: 630,
           type: "image/png",
-          alt: "MISI — sécurité incendie dans l’Yonne (89) et en Île-de-France",
+          alt: "MISI — sécurité incendie partout en France",
         },
       ],
       locale: "fr_FR",
@@ -81,7 +81,7 @@ export function generateMetadata({
       images: [
         {
           url: ogImage,
-          alt: "MISI — sécurité incendie dans l’Yonne (89) et en Île-de-France",
+          alt: "MISI — sécurité incendie partout en France",
         },
       ],
     },

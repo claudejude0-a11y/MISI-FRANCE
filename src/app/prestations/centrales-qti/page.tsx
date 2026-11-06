@@ -13,7 +13,7 @@ import { generateMetadata as buildMetadata } from "@/utils/seo/generate-page-met
 import { getBreadcrumbStructuredData, getServiceStructuredData } from "@/utils/seo/structured-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "CATI — Centrale d'alarme incendie, Yonne & Île-de-France | MISI",
+  title: "CATI — Centrale d'alarme incendie, Paris, Île-de-France, Yonne | MISI",
   description:
     "Pilotez l'ensemble de la sécurité de votre bâtiment depuis un seul point avec la CATI — supervision temps réel de vos alarmes et équipements incendie.",
   url: "/prestations/centrales-qti",

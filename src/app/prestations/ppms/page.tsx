@@ -13,7 +13,7 @@ import { generateMetadata as buildMetadata } from "@/utils/seo/generate-page-met
 import { getBreadcrumbStructuredData, getServiceStructuredData } from "@/utils/seo/structured-data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Alarme Type 4 & PPMS — Yonne & Île-de-France | MISI",
+  title: "Alarme Type 4 & PPMS — Paris, Île-de-France, Yonne | MISI",
   description:
     "MISI installe et maintient l'alarme Type 4 pour l'évacuation incendie et l'alarme PPMS pour le confinement en cas d'attentat, d'intrusion ou de risque majeur.",
   url: "/prestations/ppms",

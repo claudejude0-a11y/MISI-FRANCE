@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { priorityDepartments, zones } from "@/lib/zones-data";
+import { namedDepartments, zones } from "@/lib/zones-data";
 
 export function Footer() {
   return (
@@ -15,7 +15,7 @@ export function Footer() {
             <p className="mt-4 max-w-[260px] text-sm leading-7 text-white/60">
               Un seul interlocuteur pour l&apos;installation, la maintenance et la vérification de tous vos équipements de sécurité incendie.
             </p>
-            <p className="mt-3 max-w-[260px] text-sm leading-7 text-white/60">Intervention partout en France, en priorité : {priorityDepartments.join(", ")}.</p>
+            <p className="mt-3 max-w-[260px] text-sm leading-7 text-white/60">Intervention partout en France, notamment : {namedDepartments.join(", ")}.</p>
           </div>
           <div>
             <p className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Prestations</p>

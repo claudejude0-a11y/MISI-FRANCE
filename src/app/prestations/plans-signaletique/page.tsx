@@ -12,7 +12,7 @@ import { generateMetadata as buildMetadata } from "@/utils/seo/generate-page-met
 import { getBreadcrumbStructuredData, getServiceStructuredData } from "@/utils/seo/structured-data";
 
 export const metadata = buildMetadata({
-  title: "Plans d'évacuation & signalétique — Yonne & Île-de-France | MISI",
+  title: "Plans d'évacuation & signalétique — Paris, Île-de-France, Yonne | MISI",
   description:
     "MISI conçoit, imprime et pose vos plans d'évacuation, plans d'intervention, plans de chambre, consignes de sécurité et votre signalétique incendie — conformes NF X08-070 et NF EN ISO 7010.",
   url: "/prestations/plans-signaletique",

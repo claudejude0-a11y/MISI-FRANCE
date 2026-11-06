@@ -1,6 +1,6 @@
 # MISI — Maintenance et Installation Sécurité Incendie
 
-> MISI est une entreprise française de sécurité incendie : maintenance, installation et vérification des équipements de protection contre l'incendie. Intervention partout en France, en priorité dans l'Yonne (89), en Île-de-France (75, 77, 78, 91, 92, 93, 94, 95), dans l'Aube (10) et le Loiret (45).
+> MISI est une entreprise française de sécurité incendie : maintenance, installation et vérification des équipements de protection contre l'incendie. Intervention partout en France, notamment à Paris, en Île-de-France (75, 77, 78, 91, 92, 93, 94, 95), dans l'Yonne (89), l'Aube (10) et le Loiret (45).
 
 Téléphone : 07 62 57 56 78
 E-mail : direction@misifrance.com
@@ -22,6 +22,7 @@ E-mail : direction@misifrance.com
 
 ## Zones
 
+- [Paris (75)](https://www.misifrance.fr/zones/paris)
 - [Yonne (89)](https://www.misifrance.fr/zones/yonne-89)
 - [Île-de-France](https://www.misifrance.fr/zones/ile-de-france)
 

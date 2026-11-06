@@ -47,14 +47,14 @@ export const zonePrestationLinks: { slug: string; label: string }[] = [
   { slug: "centrales-qti", label: "CATI — centrales" },
 ];
 
-/** Départements prioritaires déclarés par MISI (intervention possible partout en France). */
-export const priorityDepartments = [
+/** Départements cités à titre d'exemple : MISI intervient partout en France, sans ordre de priorité. */
+export const namedDepartments = [
+  "Paris (75)",
   "Yonne (89)",
   "Seine-et-Marne (77)",
   "Yvelines (78)",
   "Aube (10)",
   "Loiret (45)",
-  "Paris (75)",
   "Essonne (91)",
   "Hauts-de-Seine (92)",
   "Seine-Saint-Denis (93)",
@@ -64,13 +64,32 @@ export const priorityDepartments = [
 
 export const zones: Zone[] = [
   {
+    slug: "paris",
+    name: "Paris (75)",
+    kind: "city",
+    titleTag: "Entreprise de sécurité incendie à Paris (75) — Extincteurs, BAES, RIA | MISI",
+    metaDescription:
+      "MISI, entreprise de sécurité incendie à Paris : vérification et maintenance d'extincteurs, BAES, RIA, désenfumage et portes coupe-feu. Devis gratuit.",
+    label: "Zone d'intervention",
+    h1: "Sécurité incendie à Paris",
+    intro:
+      "MISI intervient à Paris pour la vérification, la maintenance et l'installation de vos équipements de sécurité incendie.",
+    h2: "Vos équipements de sécurité incendie à Paris",
+    paragraphs: [
+      "Commerces, bureaux, hôtels, restaurants, établissements recevant du public, copropriétés : MISI accompagne les professionnels parisiens dans le suivi de leurs équipements de sécurité incendie, dans tous les arrondissements.",
+      "Extincteurs, RIA, BAES, désenfumage, portes coupe-feu, alarme incendie : chaque passage donne lieu à un rapport d'intervention et à la mise à jour de votre registre de sécurité. Vous pouvez demander un devis gratuit en ligne ou nous appeler au 07 62 57 56 78.",
+    ],
+    communes: ["Paris (75)", "Tous les arrondissements, du 1er au 20e"],
+    areaServed: "Paris",
+  },
+  {
     slug: "yonne-89",
     name: "Yonne (89)",
     kind: "department",
     titleTag: "Sécurité incendie dans l'Yonne (89) — MISI",
     metaDescription:
       "MISI, votre entreprise de sécurité incendie dans l'Yonne (89) : maintenance et installation d'extincteurs, RIA, BAES, désenfumage, alarme incendie. Devis gratuit.",
-    label: "Zone d'intervention principale",
+    label: "Zone d'intervention",
     h1: "Sécurité incendie dans l'Yonne (89)",
     intro:
       "MISI est votre partenaire de proximité pour la sécurité incendie dans tout le département de l'Yonne : vérification, maintenance et installation de vos équipements, en conformité avec la réglementation ERP et Code du travail.",
@@ -197,13 +216,13 @@ export const zones: Zone[] = [
     titleTag: "Entreprise de sécurité incendie en Île-de-France (75, 77, 78, 91 à 95) — MISI",
     metaDescription:
       "MISI intervient en Île-de-France pour la maintenance et l'installation d'équipements de sécurité incendie : extincteurs, RIA, BAES, désenfumage, alarme. Devis gratuit.",
-    label: "Zone d'intervention étendue",
+    label: "Zone d'intervention",
     h1: "Sécurité incendie en Île-de-France",
     intro:
       "MISI, entreprise de sécurité incendie, intervient dans toute l'Île-de-France : Paris, Seine-et-Marne, Yvelines, Essonne, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne et Val-d'Oise.",
     h2: "Vos équipements de sécurité incendie en Île-de-France",
     paragraphs: [
-      "Aux portes de l'Île-de-France, MISI intervient auprès des entreprises, ERP et collectivités franciliens pour la vérification, la maintenance et l'installation de leurs équipements de sécurité incendie. Nous couvrons les huit départements franciliens : 75, 77, 78, 91, 92, 93, 94 et 95.",
+      "MISI intervient auprès des entreprises, ERP et collectivités franciliens pour la vérification, la maintenance et l'installation de leurs équipements de sécurité incendie. Nous couvrons les huit départements franciliens : 75, 77, 78, 91, 92, 93, 94 et 95.",
       "Extincteurs, RIA, BAES, désenfumage, portes coupe-feu, alarme incendie : nous assurons la conformité complète de votre établissement, avec rapport d'intervention et suivi de votre registre de sécurité.",
     ],
     communes: [

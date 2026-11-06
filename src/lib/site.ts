@@ -50,7 +50,7 @@ export const siteConfig = {
       region: "Bourgogne-Franche-Comté",
       country: "FR",
     },
-    /** Zones desservies (du plus prioritaire au moins prioritaire). */
+    /** Zones citées dans les données structurées : MISI intervient partout en France. */
     areaServed: [
       "Yonne",
       "Seine-et-Marne",

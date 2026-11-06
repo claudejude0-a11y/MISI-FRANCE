@@ -57,8 +57,8 @@ export function PrestationView({ p }: { p: Prestation }) {
               </p>
             ))}
             <p className="mb-5 leading-7 text-white/60">
-              MISI est une entreprise spécialisée dans {p.serviceNoun}. Nous intervenons dans l&apos;Yonne (89), en
-              Île-de-France, dans l&apos;Aube (10), le Loiret (45) et partout en France.
+              MISI est une entreprise spécialisée dans {p.serviceNoun}. Nous intervenons partout en France, notamment à Paris, en
+              Île-de-France, dans l&apos;Yonne (89), l&apos;Aube (10) et le Loiret (45).
             </p>
 
             <div className="my-8 grid grid-cols-1 gap-4 rounded-2xl border border-white/8 bg-surface-2 p-4 sm:grid-cols-2">
