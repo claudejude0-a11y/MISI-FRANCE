@@ -15,10 +15,10 @@ export const metadata: Metadata = buildMetadata({
   url: "/a-propos",
 });
 
-const interventions: { place: string; work: string; logo?: string }[] = [
+const interventions: { place: string; work: string; logo?: { src: string; alt: string } }[] = [
   {
     place: "EHPAD Hovia à La Courneuve (93)",
-    logo: "/images/clients/hovia.png",
+    logo: { src: "/images/clients/hovia.png", alt: "Logo Hovia" },
     work: "Vérification annuelle des extincteurs et vérification semestrielle des BAES : un passage tous les 6 mois pour l'éclairage de sécurité.",
   },
   {
@@ -27,10 +27,12 @@ const interventions: { place: string; work: string; logo?: string }[] = [
   },
   {
     place: "Site classé ICPE à Gournay-Loizé (79)",
+    logo: { src: "/images/clients/scaprim.jpg", alt: "Logo Groupe SCAPRIM" },
     work: "Vérification des extincteurs et des poteaux incendie.",
   },
   {
     place: "Site classé ICPE à Roullet-Saint-Estèphe (16)",
+    logo: { src: "/images/clients/scaprim.jpg", alt: "Logo Groupe SCAPRIM" },
     work: "Vérification des extincteurs et des RIA.",
   },
 ];
@@ -134,7 +136,7 @@ export default function AProposPage() {
                 {interventions.map((item) => (
                   <li key={item.place} className="rounded-2xl border border-white/8 bg-surface p-6">
                     {item.logo && (
-                      <Image src={item.logo} alt="Logo Hovia" width={110} height={42} className="mb-3 h-10 w-auto rounded bg-white p-1" />
+                      <Image src={item.logo.src} alt={item.logo.alt} width={110} height={42} className="mb-3 h-10 w-auto rounded bg-white p-1" />
                     )}
                     <h3 className="mb-2 font-semibold text-white">{item.place}</h3>
                     <p className="text-sm leading-6 text-white/60">{item.work}</p>
