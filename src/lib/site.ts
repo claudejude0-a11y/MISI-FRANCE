@@ -44,7 +44,7 @@ export const siteConfig = {
     legalName: "Maintenance et Installation Sécurité Incendie",
     email: "direction@misifrance.com",
     /** Numéro public au format E.164 (confirmé : identique aux mentions légales, footer et page contact). */
-    phone: "+33762575678",
+    phone: "+33750644854",
     address: {
       street: "1 bis Chemin de la Renauderie",
       locality: "Dollot",

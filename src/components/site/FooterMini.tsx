@@ -47,8 +47,8 @@ export function FooterMini() {
       </nav>
       <div className="mx-auto flex max-w-[1240px] flex-col items-center justify-between gap-2 px-8 text-sm text-white/60 md:flex-row">
         <span>© 2026 MISI — Maintenance Installation Sécurité Incendie</span>
-        <a href="tel:+33762575678" className="font-semibold text-white transition hover:text-red-light">
-          07 62 57 56 78
+        <a href="tel:+33750644854" className="font-semibold text-white transition hover:text-red-light">
+          07 50 64 48 54
         </a>
         <Link href="/guides" className="transition hover:text-white">
           Guides et questions

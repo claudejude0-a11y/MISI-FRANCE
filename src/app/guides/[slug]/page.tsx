@@ -79,7 +79,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <div className="rounded-2xl border border-white/8 bg-surface p-6">
               <h2 className="mb-2 text-xl font-bold text-white">Une question sur votre bâtiment ?</h2>
               <p className="mb-4 text-sm leading-6 text-white/60">
-                Appelez-nous au <a href="tel:+33762575678" className="text-white hover:underline">07 62 57 56 78</a> ou demandez un devis gratuit.
+                Appelez-nous au <a href="tel:+33750644854" className="text-white hover:underline">07 50 64 48 54</a> ou demandez un devis gratuit.
                 {g.prestation && (
                   <>
                     {" "}

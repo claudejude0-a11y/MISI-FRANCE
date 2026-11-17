@@ -20,7 +20,7 @@ export function Footer() {
           <div>
             <p className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Prestations</p>
             {/* Listes <ul>/<li> : des liens frères sans séparateur se collaient dans
-                l'extrait Google (« 07 62 57 56 78direction@…comFormulaire »). */}
+                l'extrait Google (« 07 50 64 48 54direction@…comFormulaire »). */}
             <ul className="flex flex-col gap-2.5 text-sm text-white/45">
               <li><Link href="/prestations/extincteurs" className="transition hover:text-white">Extincteurs</Link></li>
               <li><Link href="/prestations/ria" className="transition hover:text-white">RIA</Link></li>
@@ -51,7 +51,7 @@ export function Footer() {
           <div>
             <p className="mb-4 text-xs font-bold tracking-widest text-white/60 uppercase">Contact</p>
             <ul className="flex flex-col gap-2.5 text-sm text-white/45">
-              <li><a href="tel:+33762575678" className="font-tech transition hover:text-white">07 62 57 56 78</a></li>
+              <li><a href="tel:+33750644854" className="font-tech transition hover:text-white">07 50 64 48 54</a></li>
               <li><a href="mailto:direction@misifrance.com" className="transition hover:text-white">direction@misifrance.com</a></li>
               <li><Link href="/contact" className="transition hover:text-white">Formulaire de contact</Link></li>
               <li><Link href="/a-propos" className="transition hover:text-white">À propos</Link></li>

@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const details: { Icon: typeof IconPhone; title: string; text: string; href?: string }[] = [
-  { Icon: IconPhone, title: "Téléphone", text: "07 62 57 56 78", href: "tel:+33762575678" },
+  { Icon: IconPhone, title: "Téléphone", text: "07 50 64 48 54", href: "tel:+33750644854" },
   { Icon: IconClock, title: "Horaires", text: "Du lundi au vendredi, de 8h30 à 17h30" },
   { Icon: IconMapPin, title: "Adresse", text: "1 bis Chemin de la Renauderie, 89150 Dollot" },
   { Icon: IconMail, title: "E-mail", text: "direction@misifrance.com", href: "mailto:direction@misifrance.com" },

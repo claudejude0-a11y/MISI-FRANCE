@@ -152,7 +152,7 @@ export default function AProposPage() {
                 <br />
                 Du lundi au vendredi, de 8h30 à 17h30
                 <br />
-                <a href="tel:+33762575678" className="text-white hover:underline">07 62 57 56 78</a>
+                <a href="tel:+33750644854" className="text-white hover:underline">07 50 64 48 54</a>
               </p>
               <Link
                 href="/#devis"

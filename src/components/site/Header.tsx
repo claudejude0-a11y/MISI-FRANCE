@@ -8,7 +8,7 @@ import { Spring } from "@/components/animation/springs/spring";
 import { IconPhone } from "@/components/icons";
 import { siteConfig } from "@/lib/site";
 
-const PHONE_LABEL = "07 62 57 56 78";
+const PHONE_LABEL = "07 50 64 48 54";
 
 export function Header() {
   const [open, setOpen] = useState(false);

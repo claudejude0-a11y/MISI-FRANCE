@@ -77,7 +77,7 @@ export const zones: Zone[] = [
     h2: "Vos équipements de sécurité incendie à Paris",
     paragraphs: [
       "Commerces, bureaux, hôtels, restaurants, établissements recevant du public, copropriétés : MISI accompagne les professionnels parisiens dans le suivi de leurs équipements de sécurité incendie, dans tous les arrondissements.",
-      "Extincteurs, RIA, BAES, désenfumage, portes coupe-feu, alarme incendie : chaque passage donne lieu à un rapport d'intervention et à la mise à jour de votre registre de sécurité. Vous pouvez demander un devis gratuit en ligne ou nous appeler au 07 62 57 56 78.",
+      "Extincteurs, RIA, BAES, désenfumage, portes coupe-feu, alarme incendie : chaque passage donne lieu à un rapport d'intervention et à la mise à jour de votre registre de sécurité. Vous pouvez demander un devis gratuit en ligne ou nous appeler au 07 50 64 48 54.",
     ],
     communes: ["Paris (75)", "Tous les arrondissements, du 1er au 20e"],
     areaServed: "Paris",

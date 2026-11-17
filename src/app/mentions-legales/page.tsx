@@ -38,7 +38,7 @@ export default function MentionsLegalesPage() {
               <br />
               Directeur de la publication : Vincent Adobet, président
               <br />
-              Téléphone : <a href="tel:+33762575678" className="text-red hover:underline">07 62 57 56 78</a>
+              Téléphone : <a href="tel:+33750644854" className="text-red hover:underline">07 50 64 48 54</a>
               <br />
               E-mail : <a href="mailto:direction@misifrance.com" className="text-red hover:underline">direction@misifrance.com</a>
             </p>
